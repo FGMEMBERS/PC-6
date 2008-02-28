@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Pilatus PC-6 Turbo Porter simulation config.
+
+February 2008,  Detlef Faber
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>Pilatus PC-6 Turbo Porter</description>
+  <author>Detlef Faber</author>
+  <status>beta</status>  
+  <flight-model>yasim</flight-model>
+  <aero>pc6-yasim</aero>
+
+
+  <systems>
+   <electrical>
+    <path>Aircraft/Generic/generic-electrical.xml</path>
+   </electrical>
+  </systems> 
+ 
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+  <sound>
+   <path>Aircraft/pc7/Sounds/pc7-sound.xml</path>
+  </sound>
+
+
+  <panel>
+  <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
+  <visibility>false</visibility>
+  </panel>
+
+  <model>
+   <path>Aircraft/PC-6/Models/PC-6.xml</path>
+   <crew>
+      <pilot>
+        <visible>1.0</visible>
+      </pilot>
+   </crew>
+  </model> 
+
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+    <x-offset-m archive="y" type="double">-0.265</x-offset-m>
+    <y-offset-m archive="y" type="double">0.688</y-offset-m>
+    <z-offset-m archive="y" type="double">3.7</z-offset-m>
+    <pitch-offset-deg>-7.5</pitch-offset-deg>
+   </config>
+  </view>
+
+  <view n="1">
+   <config>
+    <target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="2">
+   <config>
+    <target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="3">
+   <config>
+    <target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="4">
+   <config>
+    <target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="5">
+   <config>
+    <target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="6">
+   <config>
+    <target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
+   </config>
+  </view>
+
+
+ <autopilot>
+   <config>
+     <min-climb-speed-kt type="float">70.0</min-climb-speed-kt>
+     <best-climb-speed-kt type="float">75.0</best-climb-speed-kt>
+     <target-climb-rate-fpm type="float">500.0</target-climb-rate-fpm>
+     <target-descent-rate-fpm type="float">1000.0</target-descent-rate-fpm>
+     <elevator-adj-factor type="float">4000.0</elevator-adj-factor>
+     <integral-contribution type="float">0.01</integral-contribution>
+     <zero-pitch-throttle type="float">0.45</zero-pitch-throttle>
+     <zero-pitch-trim-full-throttle type="float">0.14</zero-pitch-trim-full-throttle>
+   </config>
+ </autopilot>
+
+  <hud>
+   <enable3d>false</enable3d>
+  </hud>  
+
+    <help>
+    <key>
+      <name>Ctrl-l</name>
+      <desc>toggle Tailwheel Lock</desc>
+    </key>
+
+    <text>---Take Off---
+Flaps down 10 degrees. Apply 100% Engine RPM While accelerating raise the tail. Be prepared to use Rudder to counteract Swing. The plane picks up speed fast so be sure to raise Flaps below 80 kts. The best climb speed is 80-90 kts. Cruise Power is at 90% Engine RPM.
+
+---Landing---
+Lower Flaps under 80 kts and set Prop to Max RPM. Approach Speed is 60-70 kts. Approach the threshold with 60 kts. Don't reduce power too early as the  idle prop acts as effective speed brake.</text>
+  </help>
+	<menubar>
+		<default>
+			<menu n="10">
+				<label>Extras</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>remove Pilot door</label>
+						<binding>
+            <command>property-toggle</command>
+            <property>controls/doors/door0/enabled</property>
+						</binding>
+					</item>
+					<item>
+						<label>remove Copilot door</label>
+              <binding>
+            <command>property-toggle</command>
+            <property>controls/doors/door1/enabled</property>
+              </binding>
+					</item>
+					<item>
+						<label>remove Swing doors</label>
+						<binding>
+            <command>property-toggle</command>
+            <property>controls/doors/door2/enabled</property>
+						</binding>
+					</item>
+					<item>
+						<label>remove Sliding door</label>
+              <binding>
+            <command>property-toggle</command>
+            <property>controls/doors/door4/enabled</property>
+              </binding>
+					</item>
+
+			</menu>
+		</default>
+	</menubar>
+ </sim>
+
+ <engines>
+  <engine>
+   <rpm type="double">700</rpm>
+  </engine>
+ </engines>
+
+ <consumables>
+  <fuel>
+   <tank n="0">
+    <name>left wing</name>
+   </tank>
+   <tank n="1">
+    <name>right wing</name>
+   </tank>
+  </fuel>
+ </consumables>
+
+ <!-- set prop for the manual "bookmark" arrow on the remote compas -->
+ <instrumentation>
+    <magnetic-compass>
+       <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
+    </magnetic-compass>
+ </instrumentation>
+
+ <!-- set up control properties for YASim -->
+ <controls>
+   <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+      </engine>
+   </engines>
+   <gear>
+      <tailwheel-lock>true</tailwheel-lock>
+   </gear>
+   <doors>
+			<door0>
+	      <enabled type="bool">true</enabled>
+			</door0>
+			<door1>
+	      <enabled type="bool">true</enabled>
+			</door1>
+			<door2>
+	      <enabled type="bool">true</enabled>
+			</door2>
+			<door4>
+	      <enabled type="bool">true</enabled>
+			</door4>
+   </doors>
+   <fuel>
+     <switch-position type = "int">0</switch-position>
+     <tank n="0">
+       <fuel_selector>true</fuel_selector>
+     </tank>
+     <tank n="1">
+       <fuel_selector>true</fuel_selector>
+     </tank>  
+   </fuel>
+
+
+ </controls>
+ <!-- Map Keys -->
+ <input>
+    <keyboard>
+      <key n="12"> 
+          <name>Ctrl-L</name>
+          <desc>Toggle Tailwheel Lock.</desc>
+          <binding> 
+            <command>property-toggle</command>
+            <property>controls/gear/tailwheel-lock</property>
+          </binding>
+      </key>
+
+     </keyboard>
+ </input>
+
+<!-- Nasal files/scripts -->
+  <nasal>
+    <pc6>
+      <file>Aircraft/PC-6/Nasal/pc-6.nas</file>
+    </pc6>
+    <pilot-g>
+     <file>Aircraft/PC-6/Nasal/pilot-g.nas</file>
+    </pilot-g>
+  </nasal>
+
+
+</PropertyList>
+
+
+
+

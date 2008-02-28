@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	<!--back-->
+	<!--right -->
+	<!--up -->
+		
+
+    <path>transparent.ac</path>
+
+<animation>
+  <type>rotate</type>
+  <object-name>pdoorglass.L</object-name>
+  <property>controls/doors/door0/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0.0</dep>
+   </entry>
+  <entry>
+    <ind>1.00</ind>
+    <dep>-100.0</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>3.256</x-m>
+   <y-m>-0.602</y-m>
+   <z-m>0.106</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>pdoorglass.R</object-name>
+  <property>controls/doors/door1/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0.0</dep>
+   </entry>
+  <entry>
+    <ind>1.00</ind>
+    <dep>100.0</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>3.256</x-m>
+   <y-m>0.602</y-m>
+   <z-m>0.106</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>fswingdoorglass</object-name>
+  <property>controls/doors/door2/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0.0</dep>
+   </entry>
+  <entry>
+    <ind>1.00</ind>
+    <dep>-100.0</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>3.991</x-m>
+   <y-m>-0.601</y-m>
+   <z-m>0.143</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>rswingdoorglass</object-name>
+  <property>controls/doors/door3/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0.0</dep>
+   </entry>
+  <entry>
+    <ind>1.00</ind>
+    <dep>100.0</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>5.547</x-m>
+   <y-m>-0.601</y-m>
+   <z-m>0.025</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>
+  <object-name>slidedoorglass</object-name>
+  <property>controls/doors/door4/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0.</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>1.5</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+<!-- doors select -->
+ <animation>
+  <type>select</type>  <object-name>pdoorglass.L</object-name>
+  <condition>
+   <equals>
+    <property>controls/doors/door0/enabled</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>  <object-name>pdoorglass.R</object-name>
+  <condition>
+   <equals>
+    <property>controls/doors/door1/enabled</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>  <object-name>fswingdoorglass</object-name>
+  <object-name>rswingdoorglass</object-name>
+  <condition>
+   <equals>
+    <property>controls/doors/door2/enabled</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>  <object-name>slidedoorglass</object-name>
+  <condition>
+   <equals>
+    <property>controls/doors/door4/enabled</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>
+
+</PropertyList>
