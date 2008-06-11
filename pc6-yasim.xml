@@ -51,7 +51,7 @@ allowed CG Range 4.015-4.186
 
 
 <hstab x="-10.133" y="0.112" z="0.508" taper="1.0" camber="0.0"
-       length="2.9" chord="1.22" sweep="0" incidence="-2.0">
+       length="2.9" chord="1.32" sweep="0" incidence="-2.0">
   <stall aoa="16" width="16" peak="1.2"/>
   <flap0 start="0.0" end="1.0" lift="1.7" drag="1.7"/>
   <control-input axis="/controls/flight/elevator" control="FLAP0"/>
@@ -61,7 +61,7 @@ allowed CG Range 4.015-4.186
 
 <!-- rudder has to be able to counteract aileron drag -->
 <vstab x="-9.66" y="0" z="0.606" taper="1.0" 
-       length="1.964" chord="1.193" sweep="0" >
+       length="2.2" chord="1.3" sweep="0" >
   <stall aoa="15" width="10" peak="1.5"/>
   <flap0 start="0" end="1" lift="1.6" drag="1.4"/>
   <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
@@ -80,15 +80,15 @@ allowed CG Range 4.015-4.186
             flat-rating="550" max-n2="101" bsfc="0.46" spool-time="4"/>
         <actionpt x="0.3" y="0.0" z="0.0"/>
         <control-input axis="/controls/engines/engine[0]/throttle"
-        control="THROTTLE"/>
+        	control="THROTTLE"/>
         <control-input axis="/controls/engines/engine[0]/condition"
-        control="CONDLEVER"/>
+        	control="CONDLEVER"/>
         <control-input axis="/controls/engines/engine[0]/starter"
-        control="STARTER"/>
+       		control="STARTER"/>
         <control-input axis="/controls/engines/engine[0]/propeller-pitch"
-        control="ADVANCE"/>
+        	control="ADVANCE"/>
         <control-input axis="/controls/engines/engine[0]/propeller-feather"
-        control="PROPFEATHER"/>
+       		control="PROPFEATHER"/>
     </propeller>
 
  <!-- left main -->

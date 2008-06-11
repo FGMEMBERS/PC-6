@@ -46,6 +46,39 @@ February 2008,  Detlef Faber
    </crew>
   </model> 
 
+	<walker>
+		<outside type="bool">false</outside>
+		<walking type="bool">false</walking>
+		<speed type="double">0.000006</speed>
+		<latitude-deg type="double">0.0</latitude-deg>
+		<longitude-deg type="double">0.0</longitude-deg>
+		<altitude-at-exit-ft type="double">0.0</altitude-at-exit-ft>
+		<altitude-ft type="double">0.0</altitude-ft>
+		<heading-deg type="double">0.0</heading-deg>
+		<pitch-deg type="double">0.0</pitch-deg>
+		<roll-deg type="double">0.0</roll-deg>
+		<internal>
+			<x-offset-m type="double">4.3</x-offset-m>
+			<y-offset-m type="double">0.0</y-offset-m>
+			<z-offset-m type="double">0.0</z-offset-m>
+			<heading-deg type="double">0.0</heading-deg>
+		</internal>
+		<keep-inside-offset-x type="double">0.0</keep-inside-offset-x>
+		<keep-inside-offset-y type="double">0.0</keep-inside-offset-y>
+		<keep-inside-offset-z type="double">0.0</keep-inside-offset-z>
+		<keep-pitch-offset-deg type="double">0.0</keep-pitch-offset-deg>
+		<key-triggers>
+			<forward type="double">0</forward>
+			<outside-toggle type="bool">0</outside-toggle>
+			<slide type="double">0</slide>
+		</key-triggers>
+		<parachute-opened-altitude-ft type="double">0</parachute-opened-altitude-ft>
+		<parachute-opened-sec type="double">0</parachute-opened-sec>
+		<starting-trajectory-lat type="double">0</starting-trajectory-lat>
+		<starting-trajectory-lon type="double">0</starting-trajectory-lon>
+		<time-of-exit-sec type="double">0</time-of-exit-sec>
+	</walker>
+
   <view n="0">
    <internal archive="y">true</internal>
    <config>
@@ -92,6 +125,27 @@ February 2008,  Detlef Faber
    </config>
   </view>
 
+	<view n="100">
+		<name>Walk View</name>
+		<type>lookfrom</type>
+		<enabled type="bool">true</enabled>
+		<config>
+			<default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+			<eye-alt-ft-path>sim/walker/altitude-ft</eye-alt-ft-path>
+			<eye-heading-deg-path>sim/walker/heading-deg</eye-heading-deg-path>
+			<eye-lat-deg-path>sim/walker/latitude-deg</eye-lat-deg-path>
+			<eye-lon-deg-path>sim/walker/longitude-deg</eye-lon-deg-path>
+			<eye-pitch-deg-path>sim/walker/pitch-deg</eye-pitch-deg-path>
+			<eye-roll-deg-path>sim/walker/roll-deg</eye-roll-deg-path>
+			<ground-level-nearplane-m type="double">0.5</ground-level-nearplane-m>
+     <x-offset-m archive="y" type="double">0.265</x-offset-m>
+     <y-offset-m archive="y" type="double">0.6</y-offset-m>
+     <z-offset-m archive="y" type="double">3.7</z-offset-m>
+			<limits>
+				<enabled type="bool">false</enabled>
+			</limits>
+		</config>
+	</view>
 
  <autopilot>
    <config>
@@ -161,6 +215,17 @@ Lower Flaps under 80 kts and set Prop to Max RPM. Approach Speed is 60-70 kts. A
 	</menubar>
  </sim>
 
+	<systems>
+		<electrical>
+			<outputs>
+				<comm n="0">2</comm>
+				<comm n="1">2</comm>
+				<KNS80>2</KNS80>
+				<adf>2</adf>
+				<nav>2</nav>
+			</outputs>
+		</electrical>
+	</systems>
  <engines>
   <engine>
    <rpm type="double">700</rpm>
@@ -232,18 +297,181 @@ Lower Flaps under 80 kts and set Prop to Max RPM. Approach Speed is 60-70 kts. A
             <property>controls/gear/tailwheel-lock</property>
           </binding>
       </key>
-
+			<key n="111">
+			<name>o</name>
+			<desc>Toggle walker outside/inside</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/walker/key-triggers/outside-toggle</property>
+			</binding>
+		</key>
+		<key n="119"> 
+			<name>w</name>
+			<desc>Walk forward</desc>
+			<repeatable>false</repeatable>
+			<binding n="0">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/forward</property>
+				<value>1</value>
+			</binding>
+			<binding n="1">
+				<command>property-assign</command>
+				<property>sim/walker/speed</property>
+				<value>0.000006</value>
+			</binding>
+			<mod-up>
+				<binding n="0">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/forward</property>
+					<value>0</value>
+				</binding>
+				<binding n="1">
+					<command>property-assign</command>
+					<property>sim/walker/speed</property>
+					<value>0.000006</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="87"> 
+			<name>W</name>
+			<desc>Run forward</desc>
+			<repeatable>false</repeatable>
+			<binding n="0">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/forward</property>
+				<value>1</value>
+			</binding>
+			<binding n="1">
+				<command>property-assign</command>
+				<property>sim/walker/speed</property>
+				<value>0.000018</value>
+			</binding>
+			<mod-up>
+				<binding n="0">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/forward</property>
+					<value>0</value>
+				</binding>
+				<binding n="1">
+					<command>property-assign</command>
+					<property>sim/walker/speed</property>
+					<value>0.000006</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="115"> 
+			<name>s</name>
+			<desc>Walk backward</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/forward</property>
+				<value>-1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/forward</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="97"> 
+			<name>a</name>
+			<desc>Slide left</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/slide</property>
+				<value>-1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/slide</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="65"> 
+			<name>A</name>
+			<desc>Slide left2, override default assignment</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/slide</property>
+				<value>-1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/slide</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="100"> 
+			<name>d</name>
+			<desc>Slide right</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/slide</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/slide</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="68"> 
+			<name>D</name>
+			<desc>Slide right2</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/slide</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/slide</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="114"> 
+			<name>r</name>
+			<desc>open parachute</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>walk.open_chute()</script>
+			</binding>
+		</key>
      </keyboard>
  </input>
 
 <!-- Nasal files/scripts -->
   <nasal>
     <pc6>
+      <file>Aircraft/Instruments-3d/ky196/KY196.nas</file>
+      <file>Aircraft/Instruments-3d/kns80/KNS80.nas</file>
       <file>Aircraft/PC-6/Nasal/pc-6.nas</file>
+
+     <script>init();</script>
     </pc6>
-    <pilot-g>
-     <file>Aircraft/PC-6/Nasal/pilot-g.nas</file>
-    </pilot-g>
+	 <walk>
+		<file>Aircraft/PC-6/Nasal/walk-1-osg.nas</file>
+		 <file>Aircraft/PC-6/Nasal/walk.nas</file>
+		 <file>Aircraft/PC-6/Nasal/map.nas</file>
+     <script>main_loop();</script>
+		</walk>
   </nasal>
 
 
