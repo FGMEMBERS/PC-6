@@ -22,7 +22,7 @@ var init = func {
 
 var main_loop = func {
   cview = getprop("/sim/current-view/view-number");
-    if (cview >= 7) {
+    if (cview == view.indexof("Walk View")) {
       aphmode = getprop ("/autopilot/locks/heading");
       apvmode = getprop ("/autopilot/locks/altitude");
 #      print (aphmode);
