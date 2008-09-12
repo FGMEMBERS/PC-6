@@ -154,12 +154,6 @@ var momentum_walk = func {
 	}
 }
 
-#var init = func {
-#	walkerm = Model.new("Aircraft/Albatross/Models/walker.xml", geo.Coord.new().set_xyz(getprop ("position/latitude-deg"), getprop ("position/longitude-deg"), getprop ("position/altitude-ft")));
-#	walkerm.unhide();
-#	print ("Model");
-#	main_loop();
-#}
 
 var main_loop = func {
 	if (getprop("sim/walker/outside") == 0) {
@@ -212,6 +206,7 @@ var ext_mov = func {
 	var posz3 = getprop("sim/walker/altitude-at-exit-ft");
 	var check_movement = 1;
 	var head = head0 + walk_heading;
+	setprop ("sim/walker/model-heading-deg" , 360-head);
 #if ( yViewNode.getValue() != 0){
 #	yViewNode.setValue(0);
 #	zViewNode.setValue(1.67);
@@ -325,6 +320,8 @@ var ext_mov = func {
 			}
 		}
 	}
+
+
 		# check for proximity to hatches for entry
 		var posy = getprop("sim/walker/latitude-deg");
 		var posx = getprop("sim/walker/longitude-deg");
@@ -504,9 +501,19 @@ var get_out = func (loc) {
 	setprop("sim/walker/starting-lat", new_coord[0]);
 	setprop("sim/walker/starting-lon", new_coord[1]);
 	walk_factor = 1.0;
-#	print (xViewNode.getValue(),yViewNode.getValue());
-#  geo.put_model("Aircraft/Albatross/Models/walker.xml",new_coord[0], new_coord[1]);
-#	print("model placed");
+
+	aircraft.makeNode("models/model/path");
+	aircraft.makeNode("models/model/longitude-deg-prop");
+	aircraft.makeNode("models/model/latitude-deg-prop");
+	aircraft.makeNode("models/model/elevation-ft-prop");
+	aircraft.makeNode("models/model/heading-deg-prop");
+	setprop ("models/model/path", "Aircraft/PC-6/Models/walker.xml");
+	setprop ("models/model/longitude-deg-prop", "sim/walker/longitude-deg");
+	setprop ("models/model/latitude-deg-prop", "sim/walker/latitude-deg");
+	setprop ("models/model/latitude-deg-prop", "sim/walker/latitude-deg");
+	setprop ("models/model/heading-deg-prop", "sim/walker/model-heading-deg");
+	setprop ("models/model/elevation-ft-prop", "sim/walker/altitude-ft");
+	aircraft.makeNode("models/model/load");
 }
 
 var get_in = func (loc) {
@@ -515,7 +522,7 @@ var get_in = func (loc) {
 		var c_head_deg = getprop("orientation/heading-deg");
 		var c_headw_deg = getprop("sim/current-view/heading-offset-deg");
 		setprop("sim/walker/outside", 0);
-
+		props.globals.getNode("/models", 1).removeChild("model", 0);
 		setprop("sim/walker/parachute-opened-altitude-ft", 0);
 		setprop("sim/walker/parachute-opened-sec", 0);
 		if (loc == 1) {

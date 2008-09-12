@@ -220,9 +220,6 @@ Lower Flaps under 80 kts and set Prop to Max RPM. Approach Speed is 60-70 kts. A
 			<outputs>
 				<comm n="0">2</comm>
 				<comm n="1">2</comm>
-				<KNS80>2</KNS80>
-				<adf>2</adf>
-				<nav>2</nav>
 			</outputs>
 		</electrical>
 	</systems>
@@ -456,12 +453,27 @@ Lower Flaps under 80 kts and set Prop to Max RPM. Approach Speed is 60-70 kts. A
 		</key>
      </keyboard>
  </input>
+<!--
+ <models>
+		<model n="0">
+			<name>walker</name>
+ 
+			<path>Aircraft/PC-6/Models/walker.xml</path>
+			<longitude-deg-prop>sim/walker/longitude-deg</longitude-deg-prop>
+			<latitude-deg-prop>sim/walker/latitude-deg</latitude-deg-prop>
+			<elevation-ft-prop>sim/walker/altitude-ft</elevation-ft-prop>
+			<heading-deg-prop>sim/walker/heading-deg</heading-deg-prop>
 
+		</model>
+  </models>
+-->
 <!-- Nasal files/scripts -->
   <nasal>
     <pc6>
       <file>Aircraft/Instruments-3d/ky196/KY196.nas</file>
-      <file>Aircraft/Instruments-3d/kns80/KNS80.nas</file>
+<!--
+			<file>Aircraft/Generic/kap140.nas</file>
+-->
       <file>Aircraft/PC-6/Nasal/pc-6.nas</file>
 
      <script>init();</script>
