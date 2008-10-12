@@ -18,7 +18,7 @@
     </animation>
 
     <model>
-        <path>Aircraft/dhc6/Models/Instruments/asi.xml</path>
+        <path>Aircraft/dhc6/Instruments/asi.xml</path>
         <offsets>
             <x-m>2.992</x-m>
             <y-m>-0.4</y-m>

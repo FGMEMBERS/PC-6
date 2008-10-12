@@ -4,7 +4,7 @@
 		<offsets>
 			<z-m>0.84</z-m>
 		</offsets>
-
+<enable-hot type="bool">false</enable-hot>
 <!-- hip -->
 
  <animation>
