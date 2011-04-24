@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+
+<!--
+************************************************************************
+YASim aerodynamic model for Pilatus PC-6 Turbo Porter
+
+allowed CG Range 4.015-4.186
+
+-->
+
+
+<airplane mass="2940">
+
+	<!-- Approach configuration -->
+	<approach speed="52" aoa="12">
+		<control-setting axis="/controls/engines/pt6a/power" value="0.3"/>
+		<!--<control-setting axis="/controls/engines/pt6a/condition" value="1.0"/>-->
+		<control-setting axis="/controls/flight/flaps" value="1.0"/>
+		<control-setting axis="/controls/gear/gear-down" value="1"/>
+	</approach>
+	
+	<!-- Cruise configuration -->
+	<cruise speed="140" alt="10000">
+		<control-setting axis="/controls/engines/pt6a/power" value="1.0"/>
+		<!--<control-setting axis="/controls/engines/pt6a/condition" value="1.0"/>-->
+		<control-setting axis="/controls/flight/flaps" value="0.0"/>
+		<control-setting axis="/controls/gear/gear-down" value="1"/>
+	</cruise>
+	
+	<!-- pilot's eyepoint -->
+	<cockpit x="-4.495" y="0" z="0.689"/>
+	
+	<fuselage ax="0.0" ay="0.0" az="-0.0" bx="-11.0" by="0.0" bz="0.3" width="1.4" taper="0.3" midpoint="0.5" />
+	
+	<!--Main Wing -->
+	<wing x="-4.475" y="0.618" z="0.821" taper="1.0" incidence="2.0" idrag="1.3" length="7.75" chord="1.9" dihedral="1.0" camber="0.2">
+		<stall aoa="11" width="8" peak="1.3"/>
+		<flap0 start="0.0" end="0.43" lift="1.7" drag="1.9"/>
+		<flap1 start="0.43" end="0.9" lift="1.5" drag="1.1"/>
+		
+		<control-input axis="/controls/flight/flaps" control="FLAP0"/>
+		<control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+		<control-speed control="FLAP0" transition-time="7"/>
+		<control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+		<control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+		<!--to simulate wing destruction-->
+		<spoiler start="0" end="1.0" lift="10" drag="0"/>
+		<control-input axis="/controls/flight/wing_destroyed" control="SPOILER" split="true"/>
+	</wing>
+	
+	
+	<hstab x="-10.133" y="0.112" z="0.508" taper="1.0" camber="0.0" length="2.2" chord="1.32" sweep="0" incidence="-2.0">
+		<stall aoa="16" width="16" peak="1.2"/>
+		<flap0 start="0.0" end="1.0" lift="1.7" drag="1.7"/>
+		<control-input axis="/controls/flight/elevator" control="FLAP0"/>
+		<control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+		<control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+	</hstab>
+	
+	<!-- rudder has to be able to counteract aileron drag -->
+	<vstab x="-9.66" y="0" z="0.606" taper="1.0" length="2.0" chord="1.3" sweep="0" >
+		<stall aoa="15" width="10" peak="1.5"/>
+		<flap0 start="0" end="1" lift="1.6" drag="1.4"/>
+		<control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+		<control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+		<control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+	</vstab>
+	
+	<!--false wing used to simulate beta range of the propeller, which is used to brake in air without reverse the propeller-->
+	<mstab x="-0.3" y="0" z="0" taper="1" length="1.28" chord="0.2" incidence="0">
+		<spoiler start="0.0" end="1.0" lift="0" drag="100"/>
+		<control-input axis="/controls/engines/pt6a/power_beta" control="SPOILER"/>
+	</mstab>
+	
+	<!--nasal propeller 2 thrusters to generate "helicoidale" torque-->
+	<thruster vx="1" vy="0" vz="0.25" x="-0.25" y="-1.0" z="0.0" thrust="1250">
+		<control-input axis="/controls/engines/pt6a/power" control="THROTTLE"/>	
+	</thruster>
+	<thruster vx="1" vy="0" vz="-0.25" x="-0.25" y="1.0" z="0.0" thrust="1250">
+		<control-input axis="/controls/engines/pt6a/power" control="THROTTLE"/>	
+	</thruster>
+
+	<!--nasal reverse propeller-->
+	<thruster vx="-1" vy="0.0" vz="0" x="-0.3" y="0.0" z="0.0" thrust="2000">
+		<control-input axis="/controls/engines/pt6a/power_reverse" control="THROTTLE"/>	
+	</thruster>
+
+	<!-- nasal turbo prop ... -->
+	<!--
+	<propeller x="-0.0" y="0.0" z="0.0" mass="550" moment="42" radius="1.28" cruise-speed="90" cruise-rpm="2000" cruise-power="500" cruise-alt="6000" min-rpm="850" max-rpm="2200">
+		<turbine-engine eng-power="550" eng-rpm="2200" alt="6000" flat-rating="550" max-n2="90" bsfc="0.46" spool-time="4"/>
+		<actionpt x="-0.22" y="0.0" z="0.0"/>
+		<control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+		<control-input axis="/controls/engines/engine[0]/condition" control="CONDLEVER"/>
+		<control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+		<control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
+		<control-input axis="/controls/engines/engine[0]/propeller-feather" control="PROPFEATHER"/>
+	</propeller>
+	-->
+	
+	 <!-- left main -->
+	<gear x="-3.195" y="1.5" z="-1.65" compression="0.15" spring="1.3" dfric="0.8" sfric ="0.8">
+		<control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+		<control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+	</gear>
+	
+	<!-- right main -->
+	<gear x="-3.195" y="-1.5" z="-1.65" compression="0.15" spring="1.3" dfric="0.8" sfric ="0.8">
+		<control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+		<control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+	</gear>
+	
+	<!-- Tail wheel -->
+	<gear x="-10.75" y="0" z="-0.47" compression="0.1" castering="1" dfric="0.6" sfric ="0.4">
+		<control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1" dst0="1" dst1="0" control="CASTERING" />
+	</gear>
+	
+	
+	<tank x="-4.475" y="3.4" z="0.821" capacity="510"/> 
+	<tank x="-4.475" y="-3.4" z="0.821" capacity="510"/> 
+	
+	
+	<weight x="-3.54" y="0.28" z="0" mass-prop="/sim/weight[0]/weight-lb"/>
+	<weight x="-3.36" y="-0.30" z="-0.24" mass-prop="/sim/weight[1]/weight-lb"/>
+	<weight x="-4.23" y="0.28" z="-0.13" mass-prop="/sim/weight[2]/weight-lb"/>
+	<weight x="-4.68" y="0.28" z="-0.13" mass-prop="/sim/weight[3]/weight-lb"/>
+	<weight x="-5" y="0.28" z="-0.13" mass-prop="/sim/weight[4]/weight-lb"/>
+	<weight x="-5.49" y="0.28" z="-0.13" mass-prop="/sim/weight[5]/weight-lb"/>
+	<weight x="-5.92" y="0.28" z="-0.13" mass-prop="/sim/weight[6]/weight-lb"/>
+	<weight x="-3.96" y="-0.30" z="-0.37" mass-prop="/sim/weight[7]/weight-lb"/>
+	<weight x="-4.69" y="-0.30" z="-0.37" mass-prop="/sim/weight[8]/weight-lb"/>
+	<weight x="-5.38" y="-0.30" z="-0.37" mass-prop="/sim/weight[9]/weight-lb"/>
+	<weight x="-5.90" y="-0.30" z="-0.13" mass-prop="/sim/weight[10]/weight-lb"/>
+	
+	<!-- to adjust gravity center-->
+	<ballast x="0" y="0.0" z="0" mass="250"/> --><!--donne un CG a 4.8 -->
+
+</airplane>
