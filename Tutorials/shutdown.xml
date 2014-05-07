@@ -144,10 +144,16 @@ The turbine must stopped with an ITT less than 500 C to avoid thermal shock.</me
 		</view>
 		<exit>
 			<condition>
-				<equals>
-					<property>/controls/engines/engine[0]/throttle</property>
-					<value>0.4</value>
-				</equals>
+				<and>
+					<greater-than>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<value>0.3</value>
+					</greater-than>
+					<less-than>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<value>0.45</value>
+					</less-than>
+				</and>
 			</condition>
 		</exit>
 	</step>

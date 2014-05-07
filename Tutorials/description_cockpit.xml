@@ -39,7 +39,7 @@ This tutorial describes the differents instruments
 			<condition>
 				<equals>
 					<property>/sim/panel-hotspots</property>
-					<value>1</value>
+					<value>true</value>
 				</equals>
 			</condition>
 		</exit>
