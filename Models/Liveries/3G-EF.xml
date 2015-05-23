@@ -4,14 +4,15 @@
 	<sim>
 		<model>
 			<livery>
-				<name type="string">Original PC-6 livery</name>
-				<texture>Liveries/porter-1.png</texture>
+				<name type="string">Oesterreichische LSK</name>
+				<texture>Liveries/3G-EF.png</texture>
 			</livery>
 		</model>
 		<multiplay>
 			<generic>
-				<string n="0">D-FABER</string>
+				<string n="0"></string>
 			</generic>
 		</multiplay>
+
 	</sim>
 </PropertyList>
