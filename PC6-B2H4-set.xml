@@ -11,10 +11,10 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 <PropertyList>
 
 	<sim>
-	
+
 		<description>Pilatus PC-6 Turbo Porter B2H4</description>
 		<author>Detlef Faber - JeeP Cheney</author>
-		<status>V 1.0 30/03/2011</status>  
+		<status>V 1.0 30/03/2011</status>
 		<flight-model>yasim</flight-model>
 		<aero>pc6-b2h4-yasim</aero>
 
@@ -22,18 +22,18 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 			<splash-texture>Aircraft/PC-6/splash.png</splash-texture>
 			<splash-title>Pilatus Turbo Porter PC6 B2H4</splash-title>
 		</startup>
-		
+
 		<systems>
 			<electrical>
 				<path>Aircraft/PC-6/Systems/electrical.xml</path><!--see electrical.nas ... -->
 			</electrical>
 			<path>Aircraft/PC-6/Systems/systems.xml</path>
-		</systems> 
+		</systems>
 
 		<instrumentation>
 			<path>Aircraft/PC-6/Systems/instrumentation.xml</path>
 		</instrumentation>
-        
+
 		<virtual-cockpit archive="y">true</virtual-cockpit>
 		<allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
 
@@ -119,7 +119,7 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 				<default-field-of-view-deg type="double">85.0</default-field-of-view-deg>
 			</config>
 		</view>
-		
+
 		<view n="101">
 			<name>Siege Video View</name>
 			<enabled type="bool">true</enabled>
@@ -137,7 +137,7 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 				<default-field-of-view-deg type="double">92.5</default-field-of-view-deg>
 			</config>
 		</view>
-		
+
 		<view n="102">
 			<name>"La cave" View</name>
 			<enabled type="bool">true</enabled>
@@ -155,7 +155,7 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 				<default-field-of-view-deg type="double">96.5</default-field-of-view-deg>
 			</config>
 		</view>
-		
+
 		<view n="103">
 			<name>Milieu de banquette View</name>
 			<enabled type="bool">true</enabled>
@@ -173,10 +173,10 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 				<default-field-of-view-deg type="double">96.5</default-field-of-view-deg>
 			</config>
 		</view>
-	
+
 		<hud>
 			<enable3d>false</enable3d>
-		</hud>  
+		</hud>
 
 		<flaps>
 			<setting>0.0</setting>
@@ -204,12 +204,12 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			</text>
 			<!-- <text>Take Off
 			Flaps down 10 degrees. Apply 100% Engine RPM While accelerating raise the tail. Be prepared to use Rudder to counteract Swing. The plane picks up speed fast so be sure to raise Flaps below 80 kts. The best climb speed is 80-90 kts. Cruise Power is at 90% Engine RPM.
-			
+
 			Landing
 			Lower Flaps under 80 kts and set Prop to Max RPM. Approach Speed is 60-70 kts. Approach the threshold with 60 kts. Don't reduce power too early as the  idle prop acts as effective speed brake.</text>
 			-->
 		</help>
-		
+
 		<menubar>
 			<default>
 				<menu n="10">
@@ -271,12 +271,12 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 				</menu>
 			</default>
 		</menubar>
-		
+
 		<alarms>
 			<stall-warning type="double">0</stall-warning>
 			<caution-warning type="double">0</caution-warning>
 			<warning-warning type="double">0</warning-warning>
-			
+
 			<annunciator.light_1_1 type="double">0</annunciator.light_1_1>
 			<annunciator.light_1_2 type="double">0</annunciator.light_1_2>
 			<annunciator.light_1_3 type="double">0</annunciator.light_1_3>
@@ -297,10 +297,10 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			<annunciator.light_4_3 type="double">0</annunciator.light_4_3>
 			<annunciator.light_4_4 type="double">0</annunciator.light_4_4>
 			<annunciator.light_4_5 type="double">0</annunciator.light_4_5>
-			
+
 			<annunciator.test type="double">0</annunciator.test>
 		</alarms>
-		
+
 		<weight n="0">
 			<name type="string">Pilot</name>
 			<min-lb type="double">0.0</min-lb>
@@ -367,7 +367,7 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			<max-lb type="double">300.0</max-lb>
 			<weight-lb>0</weight-lb>
 		</weight>
-		
+
 	</sim>
 
 	<engines>
@@ -391,7 +391,7 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			<running type="bool">false</running>
 			<starting type="bool">false</starting>
 			<ignition type="bool">false</ignition>
-			
+
 			<failure>
 				<turbine type="int">0</turbine>
 				<turbine_thermal_shock type="int">0</turbine_thermal_shock>
@@ -414,9 +414,9 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			</tank>
 		</fuel>
 	</consumables>
-	
+
 	<!--<payload></payload>-->
-	
+
 
 	<instrumentation>
 		<altimeter n="1">
@@ -476,7 +476,7 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 		<oil-indicator>
 			<serviceable type="bool">true</serviceable>
 		</oil-indicator>
-		
+
 		<starter>
 			<serviceable type="bool">false</serviceable>
 		</starter>
@@ -501,7 +501,7 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			</alternator>
 		</electrical>
 	</systems>
-			
+
 	<!-- set up control -->
 	<controls>
 		<engines>
@@ -542,12 +542,12 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			<landing-lights-L type="bool">false</landing-lights-L>
 			<landing-lights-pos-R type="double">0</landing-lights-pos-R>
 			<landing-lights-pos-L type="double">0</landing-lights-pos-L>
-			
+
 			<light_instr type="bool">false</light_instr>
 			<light_cabin type="bool">false</light_cabin>
 			<elt_diod type="double">0</elt_diod>
 		</lighting>
-		
+
 		<electric>
 			<circuitbreaker>
 				<cb_1_1 type="bool">true</cb_1_1>
@@ -577,18 +577,18 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 				<cb_5_3 type="bool">true</cb_5_3>
 				<cb_5_6 type="bool">true</cb_5_6>
 				<cb_5_7 type="bool">true</cb_5_7>
-				
+
 				<cbr_1_1 type="bool">true</cbr_1_1>
 				<cbr_1_2 type="bool">true</cbr_1_2>
 				<cbr_1_3 type="bool">true</cbr_1_3>
 				<cbr_1_4 type="bool">true</cbr_1_4>
 				<cbr_1_8 type="bool">true</cbr_1_8>
 				<cbr_2_5 type="bool">true</cbr_2_5>
-				
+
 				<bus_breaker type="bool">true</bus_breaker>
 			</circuitbreaker>
 		</electric>
-		
+
 		<switches>
 			<elevator-trim-interrupt-click type="bool">false</elevator-trim-interrupt-click>
 			<elevator-trim-interrupt-lock-click type="bool">false</elevator-trim-interrupt-lock-click>
@@ -602,9 +602,9 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			<zero_v_test-click type="bool">false</zero_v_test-click>
 			<ignition-lock-click type="bool">false</ignition-lock-click>
 			<starter-lock-click type="bool">false</starter-lock-click>
-			
+
 			<light_landing_R-click type="bool">">false</light_landing_R-click>
-			<pos_landing_R-click type="int">">0</pos_landing_R-click>
+			<pos_landing_R-click type="int">0</pos_landing_R-click>
 			<pos_landing_L-click type="int">0</pos_landing_L-click>
 			<light_landing_L-click type="bool">false</light_landing_L-click>
 			<light_beacon-click type="bool">false</light_beacon-click>
@@ -617,28 +617,28 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			<cabin_fan-click type="bool">false</cabin_fan-click>
 			<gen_bus-click type="bool">false</gen_bus-click>
 			<bat_bus-click type="bool">false</bat_bus-click>
-			
+
 			<ics-click type="double">1</ics-click>
-			
+
 			<stall_annunciator-click type="double">1</stall_annunciator-click>
 			<caution_annunciator-click type="double">1</caution_annunciator-click>
 			<warning_annunciator-click type="double">1</warning_annunciator-click>
-			
+
 			<fuel_used_reset-click type="double">0</fuel_used_reset-click>
 			<elt-click type="double">0</elt-click>
-			
+
 			<tirette.1 type="double">1</tirette.1>
 			<tirette.2 type="double">1</tirette.2>
 			<tirette.3 type="double">1</tirette.3>
-			
+
 		</switches>
-		
+
 		<flight>
 			<wing_destroyed type="double">0</wing_destroyed>
 		</flight>
 	</controls>
-	
-	
+
+
 
 	<!-- Nasal files/scripts -->
 	<nasal>
@@ -662,10 +662,10 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 	<!-- Map Keys -->
 	<input>
 		<keyboard>
-			<key n="12"> 
+			<key n="12">
 				<name>Ctrl-L</name>
 				<desc>Toggle Tailwheel Lock.</desc>
-				<binding> 
+				<binding>
 					<command>property-toggle</command>
 					<property>controls/gear/tailwheel-lock</property>
 				</binding>
@@ -688,7 +688,7 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 					<step>-0.001</step>
 				</binding>
 			</key>
-			
+
 			<key n="356">
 				<name>left</name>
 				<binding n="0">
@@ -705,7 +705,7 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 					<step>0.001</step>
 				</binding>
 			</key>
-			
+
 			<key n="360">
 				<name>fwd</name>
 				<binding n="0">
