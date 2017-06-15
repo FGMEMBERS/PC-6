@@ -14,10 +14,17 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 
 		<description>Pilatus PC-6 Turbo Porter B2H4</description>
 		<author>Detlef Faber - JeeP Cheney</author>
-		<status>V 1.0 30/03/2011</status>
+		<aircraft-version>V 1.0 30/03/2011</aircraft-version>
 		<flight-model>yasim</flight-model>
 		<aero>pc6-b2h4-yasim</aero>
 
+		<status>early production</status>
+		<rating>
+		  <FDM type="int">3</FDM>
+		  <systems type="int">4</systems>
+		  <cockpit type="int">4</cockpit>
+		  <model type="int">3</model>
+		</rating>
 		<startup>
 			<splash-texture>Aircraft/PC-6/splash.png</splash-texture>
 			<splash-title>Pilatus Turbo Porter PC6 B2H4</splash-title>
