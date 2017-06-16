@@ -115,9 +115,10 @@ allowed CG Range 4.015-4.186
 		<control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1" dst0="1" dst1="0" control="CASTERING" />
 	</gear>
 	
-	
-	<tank x="-4.475" y="3.4" z="0.821" capacity="510"/> 
-	<tank x="-4.475" y="-3.4" z="0.821" capacity="510"/> 
+
+	<!-- source: http://pilatus-aircraft.com/00-def/main/scripts/ckfinder/userfiles/files/Downloads/Brochures/Pilatus%20Aircraft%20Ltd%20-%20PC-6.pdf -->
+	<tank x="-4.475" y="3.4" z="0.821" capacity="567.7" jet="true"/> <!-- 515kg total, converted to pounds -->
+	<tank x="-4.475" y="-3.4" z="0.821" capacity="567.7" jet="true"/> 
 	
 	
 	<weight x="-3.54" y="0.28" z="0" mass-prop="/sim/weight[0]/weight-lb"/>

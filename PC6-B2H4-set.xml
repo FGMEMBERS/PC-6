@@ -25,6 +25,28 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 		  <cockpit type="int">4</cockpit>
 		  <model type="int">3</model>
 		</rating>
+		<tags>
+		  <tag>bush-plane</tag>
+		  <tag>pilatus</tag>
+		  <tag>1950s</tag> <!-- first flight in 1959 -->
+		  <tag>1960s</tag>
+		  <tag>1970s</tag>
+		  <tag>1980s</tag>
+		  <tag>1990s</tag>
+		  <tag>2000s</tag>
+		  <tag>2010s</tag> <!-- still in production -->
+		  <tag>castering-wheel</tag>
+		  <tag>fixed-gear</tag>
+		  <!-- tag>floats</tag --> <!-- possible future improvement to the model -->
+		  <tag>high-wing</tag>
+		  <tag>stol</tag>
+		  <!-- tag>skis</tag --> <!-- possible future improvement to the model -->
+		  <tag>tail-dragger</tag>
+		  <tag>propeller</tag>
+		  <tag>single-engine</tag>
+		  <tag>turboprop</tag>
+		  <tag>variable-pitch</tag>
+		</tags>
 		<startup>
 			<splash-texture>Aircraft/PC-6/splash.png</splash-texture>
 			<splash-title>Pilatus Turbo Porter PC6 B2H4</splash-title>
@@ -497,6 +519,21 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			<serviceable type="bool">false</serviceable>
 		</deice>
 	</instrumentation>
+
+	<limits>
+		<!-- source: http://pilatus-aircraft.com/00-def/main/scripts/ckfinder/userfiles/files/Downloads/Brochures/Pilatus%20Aircraft%20Ltd%20-%20PC-6.pdf -->
+		<mass-and-balance>
+			<maximum-takeoff-mass-lbs>6173</maximum-takeoff-mass-lbs>
+			<maximum-takeoff-mass-lbs>5863</maximum-takeoff-mass-lbs>
+		</mass-and-balance>
+		<max-flap-extension-speed>
+			<flaps type="double">0.99</flaps>
+			<speed type="double">95</speed>
+		</max-flap-extension-speed>
+		<max-negative-g type="double">-1.43</max-negative-g> <!-- 0.0 if flaps down -->
+		<max-positive-g type="double">3.58</max-positive-g> <!-- 2.0 if flaps down -->
+		<vne type="double">167</vne> <!-- indicated airspeed in knots; max diving speed -->
+	</limits>
 
 	<systems>
 		<electrical>
