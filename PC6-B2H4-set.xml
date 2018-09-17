@@ -13,6 +13,18 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 	<sim>
 
 		<description>Pilatus PC-6 Turbo Porter B2H4</description>
+                <long-description>
+                  This aircraft may be ugly but it is perhaps the most
+                  capable STOL utility plane in existence.  It is the
+                  only fixed-wing aircraft that can land at the Mount
+                  Everest base camp at an altitude of 17500 ft.  Take
+                  off from Lukla (VNLK) or Syangboche (VNSB) and fly
+                  north up the valley to find this base camp.  This
+                  aircraft is also a favorite parachutist hauler,
+                  thanks to its exceptional rate of climb.  Be careful
+                  however to show some respect to this aircraft or you
+                  might tear a wing, or propeller blades, off.
+                </long-description>
 		<author>Detlef Faber - JeeP Cheney</author>
 		<aircraft-version>V 1.0 30/03/2011</aircraft-version>
 		<flight-model>yasim</flight-model>
@@ -82,6 +94,28 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 				<file type="string">shark</file>
 			</livery>
 		</model>
+
+                <multiplay>
+                  <generic>
+                    <!-- these must be kept in sync with the nasal loading code in Models/PC6-B2H4.xml -->
+                    <bool type="bool" n="0" alias="/controls/doors/door0/enabled"/>
+                    <bool type="bool" n="1" alias="/controls/doors/door1/enabled"/>
+                    <bool type="bool" n="2" alias="/controls/doors/door2/enabled"/>
+                    <bool type="bool" n="3" alias="/controls/doors/door3/enabled"/>
+                    <bool type="bool" n="4" alias="/controls/doors/door4/enabled"/>
+                    <bool type="bool" n="5" alias="/controls/doors/door5/enabled"/>
+                    <bool type="bool" n="6" alias="/controls/flight/wing_destroyed"/>
+                    <bool type="bool" n="7" alias="/engines/pt6a/failure/propeller-blade"/>
+                    <bool type="bool" n="8" alias="/engines/pt6a/failure/turbine"/>
+                    <float n="0" alias="/controls/doors/door0/position-norm"/>
+                    <float n="1" alias="/controls/doors/door1/position-norm"/>
+                    <float n="2" alias="/controls/doors/door2/position-norm"/>
+                    <float n="3" alias="/controls/doors/door3/position-norm"/>
+                    <float n="4" alias="/controls/doors/door4/position-norm"/>
+                    <float n="5" alias="/controls/doors/door5/position-norm"/>
+                    <float n="6" alias="/engines/pt6a/prop_rpm"/>
+                  </generic>
+                </multiplay>
 
 		<view n="0">
 			<internal archive="y">true</internal>
@@ -422,10 +456,10 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			<ignition type="bool">false</ignition>
 
 			<failure>
-				<turbine type="int">0</turbine>
-				<turbine_thermal_shock type="int">0</turbine_thermal_shock>
-				<propeller type="int">0</propeller>
-				<propeller-blade type="int">0</propeller-blade>
+				<turbine type="bool">0</turbine>
+				<turbine_thermal_shock type="bool">0</turbine_thermal_shock>
+				<propeller type="bool">0</propeller>
+				<propeller-blade type="bool">0</propeller-blade>
 			</failure>
 		</pt6a>
 	</engines>

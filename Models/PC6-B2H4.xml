@@ -5,9 +5,34 @@
 <PropertyList>
 	
 	<path>porter.ac</path>
-	<offsets>
-		<z-m>0.0</z-m>
-	</offsets>
+        <nasal>
+        	<load><![CDATA[
+var rplayer = cmdarg();
+print ("Loading remote PC-6 and aliasing properties");
+var livery_update = aircraft.livery_update.new ("Aircraft/PC-6/Models/Liveries");
+
+for (var i=0; i <= 5; i=i+1) {
+   rplayer.getNode ("controls/doors/door" ~ i ~ "/enabled", 1).
+     alias (rplayer.getNode ("sim/multiplay/generic/bool[" ~ i ~ "]"));
+   rplayer.getNode ("controls/doors/door" ~ i ~ "/position-norm", 1).
+     alias (rplayer.getNode ("sim/multiplay/generic/float[" ~ i ~ "]"));
+}
+rplayer.getNode ("controls/flight/wing_destroyed", 1).
+  alias (rplayer.getNode ("sim/multiplay/generic/bool[6]"));
+rplayer.getNode ("engines/pt6a/failure/propeller-blade", 1).
+  alias (rplayer.getNode ("sim/multiplay/generic/bool[7]"));
+rplayer.getNode ("engines/pt6a/failure/turbine", 1).
+  alias (rplayer.getNode ("sim/multiplay/generic/bool[8]"));
+rplayer.getNode ("engines/pt6a/prop_rpm", 1).
+  alias (rplayer.getNode ("sim/multiplay/generic/float[6]"));
+print ("Done.");     
+        	]]></load>
+        	<unload><![CDATA[
+var rplayer = cmdarg();
+print("Unload PC-6", rplayer.getPath());
+livery_update.stop();
+        	]]></unload>
+        </nasal>
 
 	<animation>
 		<type>shader</type>
