@@ -564,7 +564,7 @@
 			<red>1.0</red>
 			<green>0.0</green>
 			<blue>0.0</blue>
-			<factor-prop>/instrumentation/transponder/ident</factor-prop>
+			<factor-prop>instrumentation/transponder/ident</factor-prop>
 		</emission>
 	</animation>
 	

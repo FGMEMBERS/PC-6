@@ -87,7 +87,7 @@
 			<red>1.0</red>
 			<green>0.0</green>
 			<blue>0.0</blue>
-			<factor-prop>/controls/lighting/elt-diod</factor-prop>
+			<factor-prop>controls/lighting/elt-diod</factor-prop>
 		</emission>
 	</animation>
 

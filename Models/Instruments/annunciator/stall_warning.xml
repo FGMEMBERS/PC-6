@@ -11,7 +11,7 @@
             <red>1.0</red>
             <green>1.0</green>
             <blue>0.0</blue>
-            <factor-prop>/sim/alarms/stall-warning</factor-prop>
+            <factor-prop>sim/alarms/stall-warning</factor-prop>
         </emission>
     </animation>
 
