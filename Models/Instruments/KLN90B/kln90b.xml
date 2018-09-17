@@ -54,7 +54,7 @@ Syd Adams
 	<animation>
 		<type>rotate</type>
 		<object-name>KLN90B.lhknob</object-name>
-		<property>/instrumentation/gps-annunciator/LHknobMenu</property>
+		<property>instrumentation/gps-annunciator/LHknobMenu</property>
 		<factor>-45</factor>
 		<center>
 			<x-m>-0.024</x-m>
@@ -123,7 +123,7 @@ Syd Adams
 	<animation>
 		<type>rotate</type>
 		<object-name>KLN90B.lhknob1</object-name>
-		<property>/instrumentation/gps-annunciator/LHknobPage</property>
+		<property>instrumentation/gps-annunciator/LHknobPage</property>
 		<factor>-60</factor>
 		<center>
 			<x-m>-0.024</x-m>
@@ -194,7 +194,7 @@ Syd Adams
 	<animation>
 		<type>rotate</type>
 		<object-name>KLN90B.rhknob</object-name>
-		<property>/instrumentation/gps-annunciator/RHknobMenu</property>
+		<property>instrumentation/gps-annunciator/RHknobMenu</property>
 		<factor>-36</factor>
 		<center>
 			<x-m>-0.024</x-m>
@@ -263,7 +263,7 @@ Syd Adams
 	<animation>
 		<type>rotate</type>
 		<object-name>KLN90B.rhknob1</object-name>
-		<property>/instrumentation/gps-annunciator/RHknobPage</property>
+		<property>instrumentation/gps-annunciator/RHknobPage</property>
 		<factor>-60</factor>
 		<center>
 			<x-m>-0.024</x-m>
@@ -334,7 +334,7 @@ Syd Adams
     <animation>
         <type>translate</type>
         <object-name>KLN90B.pwr</object-name>
-        <property>/instrumentation/gps/serviceable</property>
+        <property>instrumentation/gps/serviceable</property>
         <factor>-0.007</factor>
         <axis>
             <x>1.0</x>

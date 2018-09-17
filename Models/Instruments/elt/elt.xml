@@ -9,7 +9,7 @@
 		<type>rotate</type>
 		<object-name>ELT.switchUp</object-name>
 		<object-name>ELT.switchDn</object-name>
-		<property>/controls/switches/elt-click</property>
+		<property>controls/switches/elt-click</property>
 		<factor>30</factor>
 		<center>
 			<x-m>0</x-m>
@@ -31,17 +31,17 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/elt-click</property>
+				<property>controls/switches/elt-click</property>
 				<value>1</value>
 			</binding>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/lighting/elt-diod</property>
+				<property>controls/lighting/elt-diod</property>
 				<value>1</value>
 			</binding>
 			<binding>
 				<command>property-toggle</command>
-				<property>/sim/sound/switch</property>
+				<property>sim/sound/switch</property>
 			</binding>
 		</action>
 	</animation>	
@@ -53,28 +53,28 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/elt-click</property>
+				<property>controls/switches/elt-click</property>
 				<value>-1</value>
 			</binding>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/lighting/elt-diod</property>
+				<property>controls/lighting/elt-diod</property>
 				<value>1</value>
 			</binding>
 			<mod-up>
 				<binding>
 					<command>property-assign</command>
-					<property>/controls/switches/elt-click</property>
+					<property>controls/switches/elt-click</property>
 					<value>0</value>
 				</binding>
 				<binding>
 				<command>property-assign</command>
-				<property>/controls/lighting/elt-diod</property>
+				<property>controls/lighting/elt-diod</property>
 				<value>0</value>
 			</binding>
 				<binding>
 					<command>property-toggle</command>
-					<property>/sim/sound/switch</property>
+					<property>sim/sound/switch</property>
 				</binding>
 			</mod-up>
 		</action>

@@ -9,7 +9,7 @@
 		<lighting>false</lighting>
 
 		<condition>
-			<property>/engines/pt6a/failure/turbine</property>
+			<property>engines/pt6a/failure/turbine</property>
 		</condition>
 
 		<attach>world</attach>

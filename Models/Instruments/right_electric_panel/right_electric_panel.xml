@@ -22,14 +22,14 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-            <property>/controls/electric/circuitbreaker/bus_breaker</property>
+            <property>controls/electric/circuitbreaker/bus_breaker</property>
           </binding>
         </action>
     </animation>
     <animation>
         <type>translate</type>
         <object-name>bus.breaker</object-name>
-        <property>/controls/electric/circuitbreaker/bus_breaker</property>
+        <property>controls/electric/circuitbreaker/bus_breaker</property>
         <factor>0.007</factor>
         <axis>
             <x>-1.0</x>
@@ -43,7 +43,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>deice.lever</object-name>
-		<property>/controls/switches/deice-click</property>
+		<property>controls/switches/deice-click</property>
 		<factor>-60</factor>
 		<center>
 			<x-m>0.001</x-m>
@@ -64,11 +64,11 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/switches/deice-click</property>
+				<property>controls/switches/deice-click</property>
 			</binding>
 			<binding>
 				<command>property-toggle</command>
-				<property>/sim/sound/switch</property>
+				<property>sim/sound/switch</property>
 			</binding>
 		</action>
 	</animation>
@@ -77,7 +77,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>cockpit_fan.lever</object-name>
-		<property>/controls/switches/cockpit_fan-click</property>
+		<property>controls/switches/cockpit_fan-click</property>
 		<factor>-60</factor>
 		<center>
 			<x-m>0.001</x-m>
@@ -98,11 +98,11 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/switches/cockpit_fan-click</property>
+				<property>controls/switches/cockpit_fan-click</property>
 			</binding>
 			<binding>
 				<command>property-toggle</command>
-				<property>/sim/sound/switch</property>
+				<property>sim/sound/switch</property>
 			</binding>
 		</action>
 	</animation>
@@ -111,7 +111,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>battery_bus.lever</object-name>
-		<property>/controls/switches/bat_bus-click</property>
+		<property>controls/switches/bat_bus-click</property>
 		<factor>-60</factor>
 		<center>
 			<x-m>0.001</x-m>
@@ -132,11 +132,11 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/switches/bat_bus-click</property>
+				<property>controls/switches/bat_bus-click</property>
 			</binding>
 			<binding>
 				<command>property-toggle</command>
-				<property>/sim/sound/switch</property>
+				<property>sim/sound/switch</property>
 			</binding>
 		</action>
 	</animation>
@@ -145,7 +145,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>generator_bus.lever</object-name>
-		<property>/controls/switches/gen_bus-click</property>
+		<property>controls/switches/gen_bus-click</property>
 		<factor>-60</factor>
 		<center>
 			<x-m>0.001</x-m>
@@ -166,11 +166,11 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/switches/gen_bus-click</property>
+				<property>controls/switches/gen_bus-click</property>
 			</binding>
 			<binding>
 				<command>property-toggle</command>
-				<property>/sim/sound/switch</property>
+				<property>sim/sound/switch</property>
 			</binding>
 		</action>
 	</animation>

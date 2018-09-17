@@ -102,7 +102,7 @@
 			<button>3</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit1</property>
+				<property>instrumentation/transponder/digit1</property>
 				<step>1</step>
 				<min>0</min>
 				<max>7</max>
@@ -116,7 +116,7 @@
 			<button>4</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit1</property>
+				<property>instrumentation/transponder/digit1</property>
 				<step>-1</step>
 				<min>0</min>
 				<max>7</max>
@@ -132,7 +132,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit1</property>
+				<property>instrumentation/transponder/digit1</property>
 				<step type="int">-1</step>
 				<min>0</min>
 				<max>7</max>
@@ -150,7 +150,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit1</property>
+				<property>instrumentation/transponder/digit1</property>
 				<step type="int">1</step>
 				<min>0</min>
 				<max>7</max>
@@ -199,7 +199,7 @@
 			<button>3</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit2</property>
+				<property>instrumentation/transponder/digit2</property>
 				<step>1</step>
 				<min>0</min>
 				<max>7</max>
@@ -213,7 +213,7 @@
 			<button>4</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit2</property>
+				<property>instrumentation/transponder/digit2</property>
 				<step>-1</step>
 				<min>0</min>
 				<max>7</max>
@@ -229,7 +229,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit2</property>
+				<property>instrumentation/transponder/digit2</property>
 				<step type="int">-1</step>
 				<min>0</min>
 				<max>7</max>
@@ -247,7 +247,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit2</property>
+				<property>instrumentation/transponder/digit2</property>
 				<step type="int">1</step>
 				<min>0</min>
 				<max>7</max>
@@ -296,7 +296,7 @@
 			<button>3</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit3</property>
+				<property>instrumentation/transponder/digit3</property>
 				<step>1</step>
 				<min>0</min>
 				<max>7</max>
@@ -310,7 +310,7 @@
 			<button>4</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit3</property>
+				<property>instrumentation/transponder/digit3</property>
 				<step>-1</step>
 				<min>0</min>
 				<max>7</max>
@@ -327,7 +327,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit3</property>
+				<property>instrumentation/transponder/digit3</property>
 				<step type="int">-1</step>
 				<min>0</min>
 				<max>7</max>
@@ -345,7 +345,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit3</property>
+				<property>instrumentation/transponder/digit3</property>
 				<step type="int">1</step>
 				<min>0</min>
 				<max>7</max>
@@ -394,7 +394,7 @@
 			<button>3</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit4</property>
+				<property>instrumentation/transponder/digit4</property>
 				<step>1</step>
 				<min>0</min>
 				<max>7</max>
@@ -408,7 +408,7 @@
 			<button>4</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/digit4</property>
+				<property>instrumentation/transponder/digit4</property>
 				<step>-1</step>
 				<min>0</min>
 				<max>7</max>
@@ -425,7 +425,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/transponder/digit4</property>
+        <property>instrumentation/transponder/digit4</property>
         <step type="int">-1</step>
         <min>0</min>
         <max>7</max>
@@ -443,7 +443,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/transponder/digit4</property>
+        <property>instrumentation/transponder/digit4</property>
         <step type="int">1</step>
         <min>0</min>
         <max>7</max>
@@ -461,7 +461,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/transponder/mode</property>
+        <property>instrumentation/transponder/mode</property>
         <step type="int">1</step>
         <min>0</min>
         <max>4</max>
@@ -478,7 +478,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/transponder/mode</property>
+        <property>instrumentation/transponder/mode</property>
         <step type="int">-1</step>
         <min>0</min>
         <max>4</max>
@@ -489,7 +489,7 @@
   <animation> 
     <type>rotate</type>
     <object-name>KnobMode</object-name>
-    <property>/instrumentation/transponder/mode</property>
+    <property>instrumentation/transponder/mode</property>
     <factor>45</factor>
     <center>
       <x-m>  0.014 </x-m>
@@ -509,7 +509,7 @@
 			<button>3</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/mode</property>
+				<property>instrumentation/transponder/mode</property>
 				<step>1</step>
 				<min>0</min>
 				<max>4</max>
@@ -523,7 +523,7 @@
 			<button>4</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/transponder/mode</property>
+				<property>instrumentation/transponder/mode</property>
 				<step>-1</step>
 				<min>0</min>
 				<max>4</max>
@@ -540,17 +540,17 @@
       <repeatable>false</repeatable>
       <binding>
 		<condition>
-			<property>/instrumentation/transponder/serviceable</property>
+			<property>instrumentation/transponder/serviceable</property>
 			<value>true</value>
 		</condition>
         <command>property-assign</command>
-        <property>/instrumentation/transponder/ident</property>
+        <property>instrumentation/transponder/ident</property>
         <value type="double">1</value>
       </binding>          
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/instrumentation/transponder/ident</property>
+          <property>instrumentation/transponder/ident</property>
           <value type="double">0</value>
         </binding>
       </mod-up>

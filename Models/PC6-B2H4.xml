@@ -405,7 +405,7 @@
 	<animation>
         <type>rotate</type>
         <object-name>tailwheel_lock.manette</object-name>
-        <property>/controls/gear/tailwheel-lock</property>
+        <property>controls/gear/tailwheel-lock</property>
 		<center>
 			<x-m>3.66</x-m>
 			<y-m>0</y-m>
@@ -430,7 +430,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/gear/tailwheel-lock</property>
+				<property>controls/gear/tailwheel-lock</property>
 			</binding>
 		</action>
 	</animation>
@@ -439,7 +439,7 @@
 	<animation>
         <type>translate</type>
         <object-name>parking_brake</object-name>
-        <property>/controls/gear/brake-parking</property>
+        <property>controls/gear/brake-parking</property>
         <factor>0.006</factor>
         <axis>
             <x>0</x>
@@ -456,7 +456,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/gear/brake-parking</property>
+				<property>controls/gear/brake-parking</property>
 			</binding>
 		</action>
 	</animation>
@@ -465,7 +465,7 @@
 	<animation>
 	        <type>rotate</type>
 	        <object-name>fuel_valve.valve</object-name>
-	        <property>/consumables/fuel/switch-position</property>
+	        <property>consumables/fuel/switch-position</property>
 	        <factor>90</factor>
 	        <center>
 			<x-m>3.236</x-m>
@@ -487,7 +487,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/consumables/fuel/switch-position</property>
+				<property>consumables/fuel/switch-position</property>
 			</binding>
 		</action>
 	</animation>
@@ -519,7 +519,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/flight/flaps</property>
+				<property>controls/flight/flaps</property>
 				<step type="double">0.01</step>
 				<min>0</min>
 				<max>1</max>
@@ -535,7 +535,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/flight/flaps</property>
+				<property>controls/flight/flaps</property>
 				<step type="double">-0.01</step>
 				<min>0</min>
 				<max>1</max>
@@ -548,7 +548,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron_trim.knob</object-name>
-		<property>/controls/flight/aileron-trim</property>
+		<property>controls/flight/aileron-trim</property>
 		<factor>3600</factor>
 		<center>
 			<x-m>3.82</x-m>
@@ -564,7 +564,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>aileron_trim.aiguille</object-name>
-		<property>/controls/flight/aileron-trim</property>
+		<property>controls/flight/aileron-trim</property>
 		<interpolation>
 			<entry><ind>1</ind><dep>0.08</dep></entry>
 			<entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -585,7 +585,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/flight/aileron-trim</property>
+				<property>controls/flight/aileron-trim</property>
 				<step type="double">0.01</step>
 				<min>-1</min>
 				<max>1</max>
@@ -601,7 +601,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/flight/aileron-trim</property>
+				<property>controls/flight/aileron-trim</property>
 				<step type="double">-0.01</step>
 				<min>-1</min>
 				<max>1</max>
@@ -613,7 +613,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator_trim.trim_lever</object-name>
-		<property>/controls/switches/elevator-trim-click</property>
+		<property>controls/switches/elevator-trim-click</property>
 		<factor>30</factor>
 		<center>
 			<x-m>3.079</x-m>
@@ -637,30 +637,30 @@
 				<condition>
 					<and>
 						<equals>
-							<property>/controls/switches/elevator-trim-interrupt-click</property>
+							<property>controls/switches/elevator-trim-interrupt-click</property>
 							<value type="double">1</value>
 						</equals>
 						<equals>
-							<property>/instrumentation/trim/serviceable</property>
+							<property>instrumentation/trim/serviceable</property>
 							<value type="double">1</value>
 						</equals>
 					</and>
 				</condition>
 				<command>property-adjust</command>
-				<property>/controls/flight/elevator-trim</property>
+				<property>controls/flight/elevator-trim</property>
 				<step type="double">0.01</step>
 				<min>-1</min>
 				<max>1</max>
 			</binding>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/elevator-trim-click</property>
+				<property>controls/switches/elevator-trim-click</property>
 				<value type="double">1.0</value>
 			</binding>
 			<mod-up>
 				<binding>
 					<command>property-assign</command>
-					<property>/controls/switches/elevator-trim-click</property>
+					<property>controls/switches/elevator-trim-click</property>
 					<value type="double">0.0</value>
 				</binding>
 			</mod-up>
@@ -677,30 +677,30 @@
 				<condition>
 					<and>
 						<equals>
-							<property>/controls/switches/elevator-trim-interrupt-click</property>
+							<property>controls/switches/elevator-trim-interrupt-click</property>
 							<value type="double">1</value>
 						</equals>
 						<equals>
-							<property>/instrumentation/trim/serviceable</property>
+							<property>instrumentation/trim/serviceable</property>
 							<value type="double">1</value>
 						</equals>
 					</and>
 				</condition>
 				<command>property-adjust</command>
-				<property>/controls/flight/elevator-trim</property>
+				<property>controls/flight/elevator-trim</property>
 				<step type="double">-0.01</step>
 				<min>-1</min>
 				<max>1</max>
 			</binding>    
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/elevator-trim-click</property>
+				<property>controls/switches/elevator-trim-click</property>
 				<value type="double">-1.0</value>
 			</binding>
 			<mod-up>
 				<binding>
 					<command>property-assign</command>
-					<property>/controls/switches/elevator-trim-click</property>
+					<property>controls/switches/elevator-trim-click</property>
 					<value type="double">0.0</value>
 				</binding>
 			</mod-up>
@@ -711,7 +711,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator_trim.interrupt_lever</object-name>
-		<property>/controls/switches/elevator-trim-interrupt-click</property>
+		<property>controls/switches/elevator-trim-interrupt-click</property>
 		<factor>60</factor>
 		<center>
 			<x-m>3.079</x-m>
@@ -733,22 +733,22 @@
 			<binding>
 				<condition>
 					<equals>
-						<property>/controls/switches/elevator-trim-interrupt-lock-click</property>
+						<property>controls/switches/elevator-trim-interrupt-lock-click</property>
 						<value type="double">1</value>
 					</equals>
 				</condition>
 				<command>property-toggle</command>
-				<property>/controls/switches/elevator-trim-interrupt-click</property>
+				<property>controls/switches/elevator-trim-interrupt-click</property>
 			</binding>
 			<binding>
 				<condition>
 					<equals>
-						<property>/controls/switches/elevator-trim-interrupt-lock-click</property>
+						<property>controls/switches/elevator-trim-interrupt-lock-click</property>
 						<value type="double">1</value>
 					</equals>
 				</condition>
 				<command>property-toggle</command>
-				<property>/sim/sound/switch</property>
+				<property>sim/sound/switch</property>
 			</binding>
 		</action>
 	</animation>
@@ -757,7 +757,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator_trim.interrupt_lock.lever</object-name>
-		<property>/controls/switches/elevator-trim-interrupt-lock-click</property>
+		<property>controls/switches/elevator-trim-interrupt-lock-click</property>
 		<factor>90</factor>
 		<center>
 			<x-m>3.073</x-m>
@@ -779,12 +779,12 @@
 			<binding>
 				<condition>
 					<equals>
-						<property>/controls/switches/elevator-trim-interrupt-click</property>
+						<property>controls/switches/elevator-trim-interrupt-click</property>
 						<value type="double">0</value>
 					</equals>
 				</condition>
 				<command>property-toggle</command>
-				<property>/controls/switches/elevator-trim-interrupt-lock-click</property>
+				<property>controls/switches/elevator-trim-interrupt-lock-click</property>
 			</binding>
 		</action>
 	</animation>
@@ -793,7 +793,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>trim_rudder.manette</object-name>
-		<property>/controls/flight/rudder-trim</property>
+		<property>controls/flight/rudder-trim</property>
 		<center>
 			<x-m>3.704</x-m>
 			<y-m>-0.492</y-m>
@@ -823,7 +823,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/flight/rudder-trim</property>
+				<property>controls/flight/rudder-trim</property>
 				<step type="double">0.01</step>
 				<min>-1</min>
 				<max>1</max>
@@ -839,7 +839,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/flight/rudder-trim</property>
+				<property>controls/flight/rudder-trim</property>
 				<step type="double">-0.01</step>
 				<min>-1</min>
 				<max>1</max>
@@ -857,7 +857,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/tirette.1</property>
+				<property>controls/switches/tirette.1</property>
 				<value>1</value>
 			</binding>
 		</action>
@@ -871,7 +871,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/tirette.1</property>
+				<property>controls/switches/tirette.1</property>
 				<value>0</value>
 			</binding>
 		</action>
@@ -883,7 +883,7 @@
 			<button>3</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/switches/tirette.1</property>
+				<property>controls/switches/tirette.1</property>
 				<step>0.1</step>
 				<min>0</min>
 				<max>1</max>
@@ -897,7 +897,7 @@
 			<button>4</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/switches/tirette.1</property>
+				<property>controls/switches/tirette.1</property>
 				<step>-0.1</step>
 				<min>0</min>
 				<max>1</max>
@@ -907,7 +907,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>tirette.1</object-name>
-		<property>/controls/switches/tirette.1</property>
+		<property>controls/switches/tirette.1</property>
 		<factor>0.03</factor>
 		<axis>
 		<x>-1.0</x>
@@ -926,7 +926,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/tirette.2</property>
+				<property>controls/switches/tirette.2</property>
 				<value>1</value>
 			</binding>
 		</action>
@@ -940,7 +940,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/tirette.2</property>
+				<property>controls/switches/tirette.2</property>
 				<value>0</value>
 			</binding>
 		</action>
@@ -952,7 +952,7 @@
 			<button>3</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/switches/tirette.2</property>
+				<property>controls/switches/tirette.2</property>
 				<step>0.1</step>
 				<min>0</min>
 				<max>1</max>
@@ -966,7 +966,7 @@
 			<button>4</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/switches/tirette.2</property>
+				<property>controls/switches/tirette.2</property>
 				<step>-0.1</step>
 				<min>0</min>
 				<max>1</max>
@@ -976,7 +976,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>tirette.2</object-name>
-		<property>/controls/switches/tirette.2</property>
+		<property>controls/switches/tirette.2</property>
 		<factor>0.03</factor>
 		<axis>
 		<x>-1.0</x>
@@ -995,7 +995,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/tirette.3</property>
+				<property>controls/switches/tirette.3</property>
 				<value>1</value>
 			</binding>
 		</action>
@@ -1009,7 +1009,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/tirette.3</property>
+				<property>controls/switches/tirette.3</property>
 				<value>0</value>
 			</binding>
 		</action>
@@ -1021,7 +1021,7 @@
 			<button>3</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/switches/tirette.3</property>
+				<property>controls/switches/tirette.3</property>
 				<step>0.1</step>
 				<min>0</min>
 				<max>1</max>
@@ -1035,7 +1035,7 @@
 			<button>4</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/switches/tirette.3</property>
+				<property>controls/switches/tirette.3</property>
 				<step>-0.1</step>
 				<min>0</min>
 				<max>1</max>
@@ -1045,7 +1045,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>tirette.3</object-name>
-		<property>/controls/switches/tirette.3</property>
+		<property>controls/switches/tirette.3</property>
 		<factor>0.03</factor>
 		<axis>
 		<x>-1.0</x>
@@ -1064,13 +1064,13 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/ics-click</property>
+				<property>controls/switches/ics-click</property>
 				<value>0</value>
 			</binding>
 			<mod-up>
 				<binding>
 					<command>property-assign</command>
-					<property>/controls/switches/ics-click</property>
+					<property>controls/switches/ics-click</property>
 					<value>1</value>
 				</binding>
 			</mod-up>
@@ -1079,7 +1079,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>ics.push</object-name>
-		<property>/controls/switches/ics-click</property>
+		<property>controls/switches/ics-click</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>1.0</x>
@@ -1127,7 +1127,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>throttle</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
+		<property>controls/engines/engine[0]/throttle</property>
 		<factor>70.0</factor>
 		<center>
 			<x-m>3.0663</x-m>
@@ -1163,7 +1163,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>feather</object-name>
-		<property>/engines/pt6a/propeller-pitch-lever</property>
+		<property>engines/pt6a/propeller-pitch-lever</property>
 		<factor>70.0</factor>
 		<center>
 			<x-m>3.0663</x-m>
@@ -1185,7 +1185,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/engines/pt6a/propeller-pitch-lever</property>
+				<property>engines/pt6a/propeller-pitch-lever</property>
 				<step type="double">1</step>
 				<min>0</min>
 				<max>1</max>
@@ -1201,7 +1201,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/engines/pt6a/propeller-pitch-lever</property>
+				<property>engines/pt6a/propeller-pitch-lever</property>
 				<step type="double">-1</step>
 				<min>0</min>
 				<max>1</max>
@@ -1212,7 +1212,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>condition</object-name>
-		<property>/engines/pt6a/condition</property>
+		<property>engines/pt6a/condition</property>
 		<factor>35.0</factor>
 		<center>
 			<x-m>3.0663</x-m>
@@ -1234,7 +1234,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/engines/pt6a/condition</property>
+				<property>engines/pt6a/condition</property>
 				<step type="double">1</step>
 				<min>0</min>
 				<max>2</max>
@@ -1250,7 +1250,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/engines/pt6a/condition</property>
+				<property>engines/pt6a/condition</property>
 				<step type="double">-1</step>
 				<min>0</min>
 				<max>2</max>
@@ -1265,7 +1265,7 @@
 		<object-name>prop.2</object-name>
 		<condition>
 			<less-than>
-				<property>/engines/pt6a/prop_rpm</property>
+				<property>engines/pt6a/prop_rpm</property>
 				<value>1000</value>
 			</less-than>
 		</condition>
@@ -1277,11 +1277,11 @@
 		<condition>
 			<and><!--the propeller is visible if it's not destroyed-->
 				<equals>
-					<property>/engines/pt6a/failure/propeller-blade</property>
+					<property>engines/pt6a/failure/propeller-blade</property>
 					<value>0</value>
 				</equals>
 				<less-than>
-					<property>/engines/pt6a/prop_rpm</property>
+					<property>engines/pt6a/prop_rpm</property>
 					<value>1000</value>
 				</less-than>
 			</and>
@@ -1296,7 +1296,7 @@
 		<object-name>prop.2</object-name>
 		<object-name>prop.3</object-name>
 		<object-name>prop.4</object-name>
-		<property>/engines/pt6a/prop_rpm</property>
+		<property>engines/pt6a/prop_rpm</property>
 		<factor>-0.479</factor>
 		<center>
 			<x-m>0.318</x-m>
@@ -1428,7 +1428,7 @@
 		<object-name>lightglass.R</object-name>
 		<object-name>RightLandingLight</object-name>
 		<object-name>RightLandingCone</object-name>
-		<property>/controls/lighting/landing-lights-pos-R</property>
+		<property>controls/lighting/landing-lights-pos-R</property>
 		<factor>90.0</factor>
 		<center>
 			<x-m>4.17155</x-m>
@@ -1446,7 +1446,7 @@
 		<object-name>RightLandingLight</object-name>
 		<object-name>RightLandingCone</object-name>
 		<condition>
-            	<property>/controls/lighting/landing-lights-R</property>
+            	<property>controls/lighting/landing-lights-R</property>
         	</condition>
 	</animation>
 	
@@ -1456,7 +1456,7 @@
 		<object-name>lightglass.L</object-name>
 		<object-name>LeftLandingLight</object-name>
 		<object-name>LeftLandingCone</object-name>
-		<property>/controls/lighting/landing-lights-pos-L</property>
+		<property>controls/lighting/landing-lights-pos-L</property>
 		<factor>90.0</factor>
 		<center>
 			<x-m>4.17155</x-m>
@@ -1474,7 +1474,7 @@
 		<object-name>LeftLandingLight</object-name>
 		<object-name>LeftLandingCone</object-name>
 		<condition>
-            <property>/controls/lighting/landing-lights-L</property>
+            <property>controls/lighting/landing-lights-L</property>
         </condition>
 	</animation>
 	
@@ -1536,7 +1536,7 @@
 		<object-name>damper1.L</object-name>
 		<object-name>vstrut.L</object-name>
 		<object-name>fairing.L</object-name>
-		<property>/gear/gear[0]/compression-norm</property>
+		<property>gear/gear[0]/compression-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1566,7 +1566,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>damper2.L</object-name>
-		<property>/gear/gear[0]/compression-norm</property>
+		<property>gear/gear[0]/compression-norm</property>
 		<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -1619,7 +1619,7 @@
 		<object-name>damper1.R</object-name>
 		<object-name>vstrut.R</object-name>
 		<object-name>fairing.R</object-name>
-		<property>/gear/gear[1]/compression-norm</property>
+		<property>gear/gear[1]/compression-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1649,7 +1649,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>damper2.R</object-name>
-		<property>/gear/gear[1]/compression-norm</property>
+		<property>gear/gear[1]/compression-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1734,7 +1734,7 @@
 		<object-name>tailtyre</object-name>
 		<object-name>tailwheel</object-name>
 		<object-name>tail.gardeboue</object-name>
-		<property>/gear/gear[2]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>-25</factor>
 		<center>
 			<x-m>10.435</x-m>
@@ -2061,7 +2061,7 @@
 				<condition>
 					<not>
 						<greater-than>
-							<property>/controls/doors/door4/position-norm</property>
+							<property>controls/doors/door4/position-norm</property>
 							<value type="double">0</value>
 						</greater-than>
 					</not>
@@ -2175,7 +2175,7 @@
 		</emission>
 		<condition>
 			<greater-than>
-				<property>/systems/electrical/outputs/light_cabin</property>
+				<property>systems/electrical/outputs/light_cabin</property>
 				<value>20</value>
 			</greater-than>
 		</condition>
@@ -2196,7 +2196,7 @@
 		<object-name>pilot</object-name>
 		<condition>
 			<greater-than>
-				<property>/sim/current-view/view-number</property>
+				<property>sim/current-view/view-number</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -2219,12 +2219,12 @@
 			<and>
 				<not>
 					<equals>
-						<property>/sim/current-view/name</property>
+						<property>sim/current-view/name</property>
 						<value>Copilot View</value>
 					</equals>
 				</not>
 				<greater-than>
-					<property>/sim/weight[1]/weight-lb</property>
+					<property>sim/weight[1]/weight-lb</property>
 					<value>0.0</value>
 				</greater-than>
 			</and>
@@ -2245,7 +2245,7 @@
 		<object-name>para_1_floor</object-name>
 		<condition>
 			<greater-than>
-				<property>/sim/weight[7]/weight-lb</property>
+				<property>sim/weight[7]/weight-lb</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -2265,7 +2265,7 @@
 		<object-name>para_2_floor</object-name>
 		<condition>
 			<greater-than>
-				<property>/sim/weight[8]/weight-lb</property>
+				<property>sim/weight[8]/weight-lb</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -2285,7 +2285,7 @@
 		<object-name>para_3_floor</object-name>
 		<condition>
 			<greater-than>
-				<property>/sim/weight[9]/weight-lb</property>
+				<property>sim/weight[9]/weight-lb</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -2307,12 +2307,12 @@
 			<and>
 				<not>
 					<equals>
-						<property>/sim/current-view/name</property>
+						<property>sim/current-view/name</property>
 						<value>Siege Video View</value>
 					</equals>
 				</not>
 				<greater-than>
-					<property>/sim/weight[10]/weight-lb</property>
+					<property>sim/weight[10]/weight-lb</property>
 					<value>0.0</value>
 				</greater-than>
 			</and>
@@ -2333,7 +2333,7 @@
 		<object-name>para_1_bench</object-name>
 		<condition>
 			<greater-than>
-				<property>/sim/weight[2]/weight-lb</property>
+				<property>sim/weight[2]/weight-lb</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -2353,7 +2353,7 @@
 		<object-name>para_2_bench</object-name>
 		<condition>
 			<greater-than>
-				<property>/sim/weight[3]/weight-lb</property>
+				<property>sim/weight[3]/weight-lb</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -2375,12 +2375,12 @@
 			<and>
 				<not>
 					<equals>
-						<property>/sim/current-view/name</property>
+						<property>sim/current-view/name</property>
 						<value>Milieu de banquette View</value>
 					</equals>
 				</not>
 				<greater-than>
-					<property>/sim/weight[4]/weight-lb</property>
+					<property>sim/weight[4]/weight-lb</property>
 					<value>0.0</value>
 				</greater-than>
 			</and>
@@ -2401,7 +2401,7 @@
 		<object-name>para_4_bench</object-name>
 		<condition>
 			<greater-than>
-				<property>/sim/weight[5]/weight-lb</property>
+				<property>sim/weight[5]/weight-lb</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -2423,12 +2423,12 @@
 			<and>
 				<not>
 					<equals>
-						<property>/sim/current-view/name</property>
+						<property>sim/current-view/name</property>
 						<value>"La cave" View</value>
 					</equals>
 				</not>
 				<greater-than>
-					<property>/sim/weight[6]/weight-lb</property>
+					<property>sim/weight[6]/weight-lb</property>
 					<value>0.0</value>
 				</greater-than>
 			</and>
@@ -3239,7 +3239,7 @@
 		<object-name>Label Flaps</object-name>
 		<object-name>Label Ailerons trim</object-name>
 		<condition>
-			<property>/sim/panel-hotspots</property>
+			<property>sim/panel-hotspots</property>
 		</condition>
 	</animation>
 	
@@ -3248,7 +3248,7 @@
 	<!--<animation>
 		<type>translate</type>
 		<object-name>mygauge</object-name>
-		<property>/mymodel/x</property>
+		<property>mymodel/x</property>
 		<axis>
 			<x>1.0</x>
 			<y>0.0</y>
@@ -3258,7 +3258,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>mygauge</object-name>
-		<property>/mymodel/y</property>
+		<property>mymodel/y</property>
 		<axis>
 			<x>0.0</x>
 			<y>1.0</y>
@@ -3268,7 +3268,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>mygauge</object-name>
-		<property>/mymodel/z</property>
+		<property>mymodel/z</property>
 		<axis>
 			<x>0.0</x>
 			<y>0.0</y>
@@ -3606,7 +3606,7 @@
 		<object-name>lightR.support</object-name>
 		<condition>
 			<equals>
-				<property>/controls/flight/wing_destroyed</property>
+				<property>controls/flight/wing_destroyed</property>
 				<value>0</value>
 			</equals>
 		</condition>

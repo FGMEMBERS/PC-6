@@ -14,7 +14,7 @@
             <factor-prop>/sim/alarms/annunciator.light_1_1</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -28,7 +28,7 @@
             <factor-prop>/sim/alarms/annunciator.light_2_1</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -42,7 +42,7 @@
             <factor-prop>/sim/alarms/annunciator.light_3_1</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -56,7 +56,7 @@
             <factor-prop>/sim/alarms/annunciator.light_4_1</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -70,7 +70,7 @@
             <factor-prop>/sim/alarms/annunciator.light_1_2</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -84,7 +84,7 @@
             <factor-prop>/sim/alarms/annunciator.light_2_2</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -98,7 +98,7 @@
             <factor-prop>/sim/alarms/annunciator.light_3_2</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -112,7 +112,7 @@
             <factor-prop>/sim/alarms/annunciator.light_4_2</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -126,7 +126,7 @@
             <factor-prop>/sim/alarms/annunciator.light_1_3</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -140,7 +140,7 @@
             <factor-prop>/sim/alarms/annunciator.light_2_3</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -154,7 +154,7 @@
             <factor-prop>/sim/alarms/annunciator.light_3_3</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -168,7 +168,7 @@
             <factor-prop>/sim/alarms/annunciator.light_4_3</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -182,7 +182,7 @@
             <factor-prop>/sim/alarms/annunciator.light_1_4</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -196,7 +196,7 @@
             <factor-prop>/sim/alarms/annunciator.light_2_4</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -210,7 +210,7 @@
             <factor-prop>/sim/alarms/annunciator.light_3_4</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -224,7 +224,7 @@
             <factor-prop>/sim/alarms/annunciator.light_4_4</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 
@@ -238,7 +238,7 @@
             <factor-prop>/sim/alarms/annunciator.light_1_5</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -252,7 +252,7 @@
             <factor-prop>/sim/alarms/annunciator.light_2_5</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -266,7 +266,7 @@
             <factor-prop>/sim/alarms/annunciator.light_3_5</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	
@@ -280,7 +280,7 @@
             <factor-prop>/sim/alarms/annunciator.light_4_5</factor-prop>
         </emission>
 		<condition>
-			<property>/instrumentation/annunciators/general/serviceable</property>
+			<property>instrumentation/annunciators/general/serviceable</property>
 		</condition>
     </animation>
 	   

@@ -29,7 +29,7 @@
 	<animation>
         <type>rotate</type>
         <object-name>InhgKnob</object-name>
-        <property>/instrumentation/altimeter[1]/setting-inhg</property>
+        <property>instrumentation/altimeter[1]/setting-inhg</property>
 		<interpolation>
             <entry><ind>34</ind><dep>0.0</dep></entry>
             <entry><ind>20</ind><dep>1165</dep></entry>
