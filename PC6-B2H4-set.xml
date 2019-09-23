@@ -13,11 +13,52 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 	<sim>
 
 		<description>Pilatus PC-6 Turbo Porter B2H4</description>
+                <long-description>
+                  This aircraft may be ugly but it is perhaps the most
+                  capable STOL utility plane in existence.  It is the
+                  only fixed-wing aircraft that can land at the Mount
+                  Everest base camp at an altitude of 17500 ft.  Take
+                  off from Lukla (VNLK) or Syangboche (VNSB) and fly
+                  north up the valley to find this base camp.  This
+                  aircraft is also a favorite parachutist hauler,
+                  thanks to its exceptional rate of climb.  Be careful
+                  however to show some respect to this aircraft or you
+                  might tear a wing, or propeller blades, off.
+                </long-description>
 		<author>Detlef Faber - JeeP Cheney</author>
-		<status>V 1.0 30/03/2011</status>
+		<aircraft-version>V 1.0 30/03/2011</aircraft-version>
 		<flight-model>yasim</flight-model>
 		<aero>pc6-b2h4-yasim</aero>
 
+		<status>early production</status>
+		<rating>
+		  <FDM type="int">3</FDM>
+		  <systems type="int">4</systems>
+		  <cockpit type="int">4</cockpit>
+		  <model type="int">3</model>
+		</rating>
+		<tags>
+		  <tag>bush-plane</tag>
+		  <tag>pilatus</tag>
+		  <tag>1950s</tag> <!-- first flight in 1959 -->
+		  <tag>1960s</tag>
+		  <tag>1970s</tag>
+		  <tag>1980s</tag>
+		  <tag>1990s</tag>
+		  <tag>2000s</tag>
+		  <tag>2010s</tag> <!-- still in production -->
+		  <tag>castering-wheel</tag>
+		  <tag>fixed-gear</tag>
+		  <!-- tag>floats</tag --> <!-- possible future improvement to the model -->
+		  <tag>high-wing</tag>
+		  <tag>stol</tag>
+		  <!-- tag>skis</tag --> <!-- possible future improvement to the model -->
+		  <tag>tail-dragger</tag>
+		  <tag>propeller</tag>
+		  <tag>single-engine</tag>
+		  <tag>turboprop</tag>
+		  <tag>variable-pitch</tag>
+		</tags>
 		<startup>
 			<splash-texture>Aircraft/PC-6/splash.png</splash-texture>
 			<splash-title>Pilatus Turbo Porter PC6 B2H4</splash-title>
@@ -53,6 +94,28 @@ Decembre 2010 - Mars 2011	Cheney Jean-Pierre
 				<file type="string">shark</file>
 			</livery>
 		</model>
+
+                <multiplay>
+                  <generic>
+                    <!-- these must be kept in sync with the nasal loading code in Models/PC6-B2H4.xml -->
+                    <bool type="bool" n="0" alias="/controls/doors/door0/enabled"/>
+                    <bool type="bool" n="1" alias="/controls/doors/door1/enabled"/>
+                    <bool type="bool" n="2" alias="/controls/doors/door2/enabled"/>
+                    <bool type="bool" n="3" alias="/controls/doors/door3/enabled"/>
+                    <bool type="bool" n="4" alias="/controls/doors/door4/enabled"/>
+                    <bool type="bool" n="5" alias="/controls/doors/door5/enabled"/>
+                    <bool type="bool" n="6" alias="/controls/flight/wing_destroyed"/>
+                    <bool type="bool" n="7" alias="/engines/pt6a/failure/propeller-blade"/>
+                    <bool type="bool" n="8" alias="/engines/pt6a/failure/turbine"/>
+                    <float n="0" alias="/controls/doors/door0/position-norm"/>
+                    <float n="1" alias="/controls/doors/door1/position-norm"/>
+                    <float n="2" alias="/controls/doors/door2/position-norm"/>
+                    <float n="3" alias="/controls/doors/door3/position-norm"/>
+                    <float n="4" alias="/controls/doors/door4/position-norm"/>
+                    <float n="5" alias="/controls/doors/door5/position-norm"/>
+                    <float n="6" alias="/engines/pt6a/prop_rpm"/>
+                  </generic>
+                </multiplay>
 
 		<view n="0">
 			<internal archive="y">true</internal>
@@ -393,10 +456,10 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			<ignition type="bool">false</ignition>
 
 			<failure>
-				<turbine type="int">0</turbine>
-				<turbine_thermal_shock type="int">0</turbine_thermal_shock>
-				<propeller type="int">0</propeller>
-				<propeller-blade type="int">0</propeller-blade>
+				<turbine type="bool">0</turbine>
+				<turbine_thermal_shock type="bool">0</turbine_thermal_shock>
+				<propeller type="bool">0</propeller>
+				<propeller-blade type="bool">0</propeller-blade>
 			</failure>
 		</pt6a>
 	</engines>
@@ -490,6 +553,21 @@ Never exceed 50 of torque (it can damage the propeller reducter), 1090 C of ITT 
 			<serviceable type="bool">false</serviceable>
 		</deice>
 	</instrumentation>
+
+	<limits>
+		<!-- source: http://pilatus-aircraft.com/00-def/main/scripts/ckfinder/userfiles/files/Downloads/Brochures/Pilatus%20Aircraft%20Ltd%20-%20PC-6.pdf -->
+		<mass-and-balance>
+			<maximum-takeoff-mass-lbs>6173</maximum-takeoff-mass-lbs>
+			<maximum-takeoff-mass-lbs>5863</maximum-takeoff-mass-lbs>
+		</mass-and-balance>
+		<max-flap-extension-speed>
+			<flaps type="double">0.99</flaps>
+			<speed type="double">95</speed>
+		</max-flap-extension-speed>
+		<max-negative-g type="double">-1.43</max-negative-g> <!-- 0.0 if flaps down -->
+		<max-positive-g type="double">3.58</max-positive-g> <!-- 2.0 if flaps down -->
+		<vne type="double">167</vne> <!-- indicated airspeed in knots; max diving speed -->
+	</limits>
 
 	<systems>
 		<electrical>

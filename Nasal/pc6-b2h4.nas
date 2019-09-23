@@ -41,13 +41,6 @@ var main_loop = func {
 
 #fuel used, for the fuel used instrument
 var fuel_used = func{
-
-	var fuel_density = 6.0;
-	setprop("/consumables/fuel/tank[0]/level-lbs",fuel_density * getprop("/consumables/fuel/tank[0]/level-gal_us"));
-	setprop("/consumables/fuel/tank[1]/level-lbs",fuel_density * getprop("/consumables/fuel/tank[1]/level-gal_us"));
-	setprop("/consumables/fuel/total-fuel-gals",getprop("/consumables/fuel/tank[0]/level-gal_us") +  getprop("/consumables/fuel/tank[1]/level-gal_us"));
-	setprop("/consumables/fuel/total-fuel-lbs",getprop("/consumables/fuel/tank[0]/level-lbs") +  getprop("/consumables/fuel/tank[1]/level-lbs"));
-	
 	if(last_fuel_read==nil){
 		last_fuel_read = getprop("/consumables/fuel/total-fuel-lbs");
 	}

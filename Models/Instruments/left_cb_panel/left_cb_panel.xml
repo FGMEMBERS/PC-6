@@ -24,14 +24,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_1_1</property>
+				<property>controls/electric/circuitbreaker/cb_1_1</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.1_1</object-name>
-		<property>/controls/electric/circuitbreaker/cb_1_1</property>
+		<property>controls/electric/circuitbreaker/cb_1_1</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -49,14 +49,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_1_2</property>
+				<property>controls/electric/circuitbreaker/cb_1_2</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.1_2</object-name>
-		<property>/controls/electric/circuitbreaker/cb_1_2</property>
+		<property>controls/electric/circuitbreaker/cb_1_2</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -74,14 +74,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_1_3</property>
+				<property>controls/electric/circuitbreaker/cb_1_3</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.1_3</object-name>
-		<property>/controls/electric/circuitbreaker/cb_1_3</property>
+		<property>controls/electric/circuitbreaker/cb_1_3</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -99,14 +99,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_1_6</property>
+				<property>controls/electric/circuitbreaker/cb_1_6</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.1_6</object-name>
-		<property>/controls/electric/circuitbreaker/cb_1_6</property>
+		<property>controls/electric/circuitbreaker/cb_1_6</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -124,14 +124,14 @@
 	<repeatable>false</repeatable>
 	<binding>
 	<command>property-toggle</command>
-	<property>/controls/electric/circuitbreaker/cb_1_7</property>
+	<property>controls/electric/circuitbreaker/cb_1_7</property>
 	</binding>
 	</action>
 	</animation>
 	<animation>
 	<type>translate</type>
 	<object-name>circuit_breakers.cb.1_7</object-name>
-	<property>/controls/electric/circuitbreaker/cb_1_7</property>
+	<property>controls/electric/circuitbreaker/cb_1_7</property>
 	<factor>0.007</factor>
 	<axis>
 	<x>0.0</x>
@@ -149,14 +149,14 @@
 	<repeatable>false</repeatable>
 	<binding>
 	<command>property-toggle</command>
-	<property>/controls/electric/circuitbreaker/cb_1_8</property>
+	<property>controls/electric/circuitbreaker/cb_1_8</property>
 	</binding>
 	</action>
 	</animation>
 	<animation>
 	<type>translate</type>
 	<object-name>circuit_breakers.cb.1_8</object-name>
-	<property>/controls/electric/circuitbreaker/cb_1_8</property>
+	<property>controls/electric/circuitbreaker/cb_1_8</property>
 	<factor>0.007</factor>
 	<axis>
 	<x>0.0</x>
@@ -174,14 +174,14 @@
 	<repeatable>false</repeatable>
 	<binding>
 	<command>property-toggle</command>
-	<property>/controls/electric/circuitbreaker/cb_2_1</property>
+	<property>controls/electric/circuitbreaker/cb_2_1</property>
 	</binding>
 	</action>
 	</animation>
 	<animation>
 	<type>translate</type>
 	<object-name>circuit_breakers.cb.2_1</object-name>
-	<property>/controls/electric/circuitbreaker/cb_2_1</property>
+	<property>controls/electric/circuitbreaker/cb_2_1</property>
 	<factor>0.007</factor>
 	<axis>
 	<x>0.0</x>
@@ -199,14 +199,14 @@
 	<repeatable>false</repeatable>
 	<binding>
 	<command>property-toggle</command>
-	<property>/controls/electric/circuitbreaker/cb_2_4</property>
+	<property>controls/electric/circuitbreaker/cb_2_4</property>
 	</binding>
 	</action>
 	</animation>
 	<animation>
 	<type>translate</type>
 	<object-name>circuit_breakers.cb.2_4</object-name>
-	<property>/controls/electric/circuitbreaker/cb_2_4</property>
+	<property>controls/electric/circuitbreaker/cb_2_4</property>
 	<factor>0.007</factor>
 	<axis>
 	<x>0.0</x>
@@ -224,14 +224,14 @@
 	<repeatable>false</repeatable>
 	<binding>
 	<command>property-toggle</command>
-	<property>/controls/electric/circuitbreaker/cb_3_1</property>
+	<property>controls/electric/circuitbreaker/cb_3_1</property>
 	</binding>
 	</action>
 	</animation>
 	<animation>
 	<type>translate</type>
 	<object-name>circuit_breakers.cb.3_1</object-name>
-	<property>/controls/electric/circuitbreaker/cb_3_1</property>
+	<property>controls/electric/circuitbreaker/cb_3_1</property>
 	<factor>0.007</factor>
 	<axis>
 	<x>0.0</x>
@@ -249,14 +249,14 @@
 	<repeatable>false</repeatable>
 	<binding>
 	<command>property-toggle</command>
-	<property>/controls/electric/circuitbreaker/cb_3_2</property>
+	<property>controls/electric/circuitbreaker/cb_3_2</property>
 	</binding>
 	</action>
 	</animation>
 	<animation>
 	<type>translate</type>
 	<object-name>circuit_breakers.cb.3_2</object-name>
-	<property>/controls/electric/circuitbreaker/cb_3_2</property>
+	<property>controls/electric/circuitbreaker/cb_3_2</property>
 	<factor>0.007</factor>
 	<axis>
 	<x>0.0</x>
@@ -274,14 +274,14 @@
 	<repeatable>false</repeatable>
 	<binding>
 	<command>property-toggle</command>
-	<property>/controls/electric/circuitbreaker/cb_3_3</property>
+	<property>controls/electric/circuitbreaker/cb_3_3</property>
 	</binding>
 	</action>
 	</animation>
 	<animation>
 	<type>translate</type>
 	<object-name>circuit_breakers.cb.3_3</object-name>
-	<property>/controls/electric/circuitbreaker/cb_3_3</property>
+	<property>controls/electric/circuitbreaker/cb_3_3</property>
 	<factor>0.007</factor>
 	<axis>
 	<x>0.0</x>
@@ -299,14 +299,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_3_4</property>
+				<property>controls/electric/circuitbreaker/cb_3_4</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.3_4</object-name>
-		<property>/controls/electric/circuitbreaker/cb_3_4</property>
+		<property>controls/electric/circuitbreaker/cb_3_4</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -324,14 +324,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_3_5</property>
+				<property>controls/electric/circuitbreaker/cb_3_5</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.3_5</object-name>
-		<property>/controls/electric/circuitbreaker/cb_3_5</property>
+		<property>controls/electric/circuitbreaker/cb_3_5</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -349,14 +349,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_3_6</property>
+				<property>controls/electric/circuitbreaker/cb_3_6</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.3_6</object-name>
-		<property>/controls/electric/circuitbreaker/cb_3_6</property>
+		<property>controls/electric/circuitbreaker/cb_3_6</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -374,14 +374,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_3_7</property>
+				<property>controls/electric/circuitbreaker/cb_3_7</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.3_7</object-name>
-		<property>/controls/electric/circuitbreaker/cb_3_7</property>
+		<property>controls/electric/circuitbreaker/cb_3_7</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -399,14 +399,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_3_8</property>
+				<property>controls/electric/circuitbreaker/cb_3_8</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.3_8</object-name>
-		<property>/controls/electric/circuitbreaker/cb_3_8</property>
+		<property>controls/electric/circuitbreaker/cb_3_8</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -424,14 +424,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_4_1</property>
+				<property>controls/electric/circuitbreaker/cb_4_1</property>
 			</binding>
 		</action>
 	</animation>
 		<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.4_1</object-name>
-		<property>/controls/electric/circuitbreaker/cb_4_1</property>
+		<property>controls/electric/circuitbreaker/cb_4_1</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -449,14 +449,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_4_3</property>
+				<property>controls/electric/circuitbreaker/cb_4_3</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.4_3</object-name>
-		<property>/controls/electric/circuitbreaker/cb_4_3</property>
+		<property>controls/electric/circuitbreaker/cb_4_3</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -474,14 +474,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_4_4</property>
+				<property>controls/electric/circuitbreaker/cb_4_4</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.4_4</object-name>
-		<property>/controls/electric/circuitbreaker/cb_4_4</property>
+		<property>controls/electric/circuitbreaker/cb_4_4</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -499,14 +499,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_4_5</property>
+				<property>controls/electric/circuitbreaker/cb_4_5</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.4_5</object-name>
-		<property>/controls/electric/circuitbreaker/cb_4_5</property>
+		<property>controls/electric/circuitbreaker/cb_4_5</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -524,14 +524,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_4_6</property>
+				<property>controls/electric/circuitbreaker/cb_4_6</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.4_6</object-name>
-		<property>/controls/electric/circuitbreaker/cb_4_6</property>
+		<property>controls/electric/circuitbreaker/cb_4_6</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -549,14 +549,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_4_8</property>
+				<property>controls/electric/circuitbreaker/cb_4_8</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.4_8</object-name>
-		<property>/controls/electric/circuitbreaker/cb_4_8</property>
+		<property>controls/electric/circuitbreaker/cb_4_8</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -574,14 +574,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_5_1</property>
+				<property>controls/electric/circuitbreaker/cb_5_1</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.5_1</object-name>
-		<property>/controls/electric/circuitbreaker/cb_5_1</property>
+		<property>controls/electric/circuitbreaker/cb_5_1</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -599,14 +599,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_5_2</property>
+				<property>controls/electric/circuitbreaker/cb_5_2</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.5_2</object-name>
-		<property>/controls/electric/circuitbreaker/cb_5_2</property>
+		<property>controls/electric/circuitbreaker/cb_5_2</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -624,14 +624,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_5_3</property>
+				<property>controls/electric/circuitbreaker/cb_5_3</property>
 			</binding>
 		</action>
 	</animation>
 		<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.5_3</object-name>
-		<property>/controls/electric/circuitbreaker/cb_5_3</property>
+		<property>controls/electric/circuitbreaker/cb_5_3</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -649,14 +649,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_5_6</property>
+				<property>controls/electric/circuitbreaker/cb_5_6</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.5_6</object-name>
-		<property>/controls/electric/circuitbreaker/cb_5_6</property>
+		<property>controls/electric/circuitbreaker/cb_5_6</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -674,14 +674,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/controls/electric/circuitbreaker/cb_5_7</property>
+				<property>controls/electric/circuitbreaker/cb_5_7</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.cb.5_7</object-name>
-		<property>/controls/electric/circuitbreaker/cb_5_7</property>
+		<property>controls/electric/circuitbreaker/cb_5_7</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>0.0</x>
@@ -703,7 +703,7 @@
 			</binding>
 			<binding>
 					<command>property-toggle</command>
-					<property>/controls/switches/circuit_breakers.annunciator_test</property>
+					<property>controls/switches/circuit_breakers.annunciator_test</property>
 				</binding>
 			<!--<binding>
 				<command>nasal</command>
@@ -712,7 +712,7 @@
 			<mod-up>
 				<binding>
 					<command>property-toggle</command>
-					<property>/controls/switches/circuit_breakers.annunciator_test</property>
+					<property>controls/switches/circuit_breakers.annunciator_test</property>
 				</binding>
 			</mod-up>
 		</action>
@@ -720,7 +720,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>circuit_breakers.annunciator_test</object-name>
-		<property>/controls/switches/circuit_breakers.annunciator_test</property>
+		<property>controls/switches/circuit_breakers.annunciator_test</property>
 		<factor>0.007</factor>
 		<axis>
 			<x>-1.0</x>

@@ -11,7 +11,7 @@
             <red>1.0</red>
             <green>1.0</green>
             <blue>0.0</blue>
-            <factor-prop>/sim/alarms/stall-warning</factor-prop>
+            <factor-prop>sim/alarms/stall-warning</factor-prop>
         </emission>
     </animation>
 
@@ -24,13 +24,13 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>/controls/switches/stall_annunciator-click</property>
+				<property>controls/switches/stall_annunciator-click</property>
 				<value>0</value>
 			</binding>
 			<mod-up>
 				<binding>
 					<command>property-assign</command>
-					<property>/controls/switches/stall_annunciator-click</property>
+					<property>controls/switches/stall_annunciator-click</property>
 					<value>1</value>
 				</binding>
 			</mod-up>
@@ -39,7 +39,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>stall_annunciator.light</object-name>
-		<property>/controls/switches/stall_annunciator-click</property>
+		<property>controls/switches/stall_annunciator-click</property>
 		<factor>0.002</factor>
 		<axis>
 			<x>1.0</x>

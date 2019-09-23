@@ -142,21 +142,21 @@ var EngineClass = {
 			
 			var fuel_consumption_tank0 = me.fuel_flow.getValue() / 2;
 			var fuel_consumption_tank1 = me.fuel_flow.getValue() / 2;
-			if(props.globals.getNode("/consumables/fuel/tank[0]/level-gal_us").getValue()<=0){
+			if(props.globals.getNode("/consumables/fuel/tank[0]/level-lbs").getValue()<=0){
 				fuel_consumption_tank1 = fuel_consumption_tank0 + fuel_consumption_tank1;
 				fuel_consumption_tank0 = 0;
-				props.globals.getNode("/consumables/fuel/tank[0]/level-gal_us").setValue(0);
+				props.globals.getNode("/consumables/fuel/tank[0]/level-lb").setValue(0);
 			}
-			if(props.globals.getNode("/consumables/fuel/tank[1]/level-gal_us").getValue()<=0){
+			if(props.globals.getNode("/consumables/fuel/tank[1]/level-lbs").getValue()<=0){
 				fuel_consumption_tank0 = fuel_consumption_tank0 + fuel_consumption_tank1;
 				fuel_consumption_tank1 = 0;
-				props.globals.getNode("/consumables/fuel/tank[1]/level-gal_us").setValue(0);
+				props.globals.getNode("/consumables/fuel/tank[1]/level-lbs").setValue(0);
 			}
 			
-			var level_gal_us0 = getprop("/consumables/fuel/tank[0]/level-gal_us") - dt*fuel_consumption_tank0/3600;
-			setprop("/consumables/fuel/tank[0]/level-gal_us",level_gal_us0);
-			var level_gal_us1 = getprop("/consumables/fuel/tank[1]/level-gal_us") - dt*fuel_consumption_tank1/3600;
-			setprop("/consumables/fuel/tank[1]/level-gal_us",level_gal_us1);
+			var level_lbs0 = getprop("/consumables/fuel/tank[0]/level-lbs") - dt*fuel_consumption_tank0/3600;
+			setprop("/consumables/fuel/tank[0]/level-lbs",level_lbs0);
+			var level_lbs1 = getprop("/consumables/fuel/tank[1]/level-lbs") - dt*fuel_consumption_tank1/3600;
+			setprop("/consumables/fuel/tank[1]/level-lbs",level_lbs1);
 		}else{
 			me.fuel_flow.setValue(0);
 			me.running.setBoolValue(0);
